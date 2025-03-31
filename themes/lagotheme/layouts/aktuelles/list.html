@@ -2,7 +2,9 @@
   <h1 style="color: red;">{{ .Title }}</h1>
   {{ .Content }}
   
-  {{ range .Pages }}
+  {{ $posts := .Site.GetPage "section" "aktuelles/posts" }}
+  <h2>Posts</h2>
+  {{ range $posts.Pages }}
     {{ with (.Resources.ByType "image") }}
       <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
     {{ else }}
@@ -16,4 +18,19 @@
     <summary>{{ .Summary }}</summary>
   {{ end }}
 
+  {{ $archiv := .Site.GetPage "section" "aktuelles/archiv" }}
+  <h2>Archiv</h2>
+  {{ range $archiv.Pages }}
+    {{ with (.Resources.ByType "image") }}
+      <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
+    {{ else }}
+      <p class="fallback">Kein Bild verfügbar</p>
+    {{ end }}
+    {{ if .Params.linkEnabled }}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ else }}
+      <h2>{{ .Title }}</h2>
+    {{ end }}
+    <summary>{{ .Summary }}</summary>
+  {{ end }}
 {{ end }}
