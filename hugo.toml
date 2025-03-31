@@ -1,0 +1,4 @@
+baseURL = 'https://www.langerteich.de'
+languageCode = 'de'
+title = 'Förderverein Langer Teich'
+theme = 'lagotheme'
