@@ -1,25 +1,47 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Förderverein Langer Teich</title>
+    <title>Start on Förderverein Langer Teich</title>
     <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/</link>
-    <description>Recent content on Förderverein Langer Teich</description>
+    <description>Recent content in Start on Förderverein Langer Teich</description>
     <generator>Hugo</generator>
     <language>de</language>
+    <lastBuildDate>Thu, 19 Sep 2024 00:40:04 -0700</lastBuildDate>
     <atom:link href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title></title>
+      <title>Post 1</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</link>
+      <pubDate>Thu, 19 Sep 2024 00:40:04 -0700</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</guid>
+      <description>&lt;h1 id=&#34;post-1&#34;&gt;Post 1&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 2</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240602-post2/</link>
+      <pubDate>Sun, 02 Jun 2024 00:40:04 -0700</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240602-post2/</guid>
+      <description>&lt;h1 id=&#34;post-2&#34;&gt;Post 2&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 3</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/archiv/20220115-post3/</link>
+      <pubDate>Sat, 15 Jan 2022 00:40:04 -0700</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/archiv/20220115-post3/</guid>
+      <description>&lt;h1 id=&#34;post-3&#34;&gt;Post 3&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Datenschutz</title>
       <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/datenschutz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/datenschutz/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;datenschutz&#34;&gt;Datenschutz&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
     </item>
     <item>
-      <title></title>
+      <title>Impressum</title>
       <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/impressum/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/impressum/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;impressum&#34;&gt;Impressum&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
