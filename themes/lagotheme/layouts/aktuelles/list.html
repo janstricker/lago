@@ -8,7 +8,12 @@
     {{ else }}
       <p class="fallback">Kein Bild verfügbar</p>
     {{ end }}
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ if .Params.linkEnabled }}
+      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+    {{ else }}
+      <h2>{{ .Title }}</h2>
+    {{ end }}
+    <summary>{{ .Summary }}</summary>
   {{ end }}
 
 {{ end }}

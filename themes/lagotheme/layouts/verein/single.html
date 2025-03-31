@@ -1,8 +1,21 @@
 {{ define "main" }}
-  <h1>{{ .Title }}</h1>
+  <h1 style="color: blue;">{{ .Title }}</h1>
   {{ .Content }}
-  {{ range .Pages }}
-    <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-    {{ .Summary }}
+  
+  {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
+  {{ if $vorstand }}
+    {{ range $vorstand.Pages }}
+      {{ if eq .Kind "page" }}
+        <div>
+          {{ with .Resources.ByType "image" }}
+            <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Params.name }}" />
+          {{ end }}
+          <h2>{{ .Params.name }}</h2>
+          <p>{{ .Params.position }}</p>
+        </div>
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    <p>Keine Einträge gefunden.</p>
   {{ end }}
 {{ end }}

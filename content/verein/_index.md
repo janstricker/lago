@@ -1,6 +1,6 @@
 +++
 title = 'Verein'
-menu = 'true'
+layout = 'single'
 +++
 
 # Der Förderverein Langer Teich
