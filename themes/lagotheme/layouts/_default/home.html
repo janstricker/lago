@@ -1,6 +1,23 @@
 {{ define "main" }}
+
+
+
   {{ .Content }}
   
+  <section id="stage">
+    {{ if .Params.isOpen }}
+      {{ with .Resources.GetMatch "homepage/open.*" }}
+      <img class="stageImg" src="{{ .RelPermalink }}" alt="{{.Params.openText}}" />
+      {{ end }}
+      <p class ="open">Geöffnet</p> <p>{{ .Params.openText }}</p>
+    {{ else }}
+      {{ with .Resources.GetMatch "homepage/closed.*" }}
+      <img class="stageImg" src="{{ .RelPermalink }}" alt="{{.Params.closedText}}" />
+      {{ end }}
+      <p class ="closed">Geschlossen</p> <p>{{ .Params.closedText }}</p>
+    {{ end }}
+  </section>
+
   <section>
     <h2>Aktuelles</h2>
     <ul>
@@ -23,5 +40,17 @@
     </ul>
   </section>
 
+  <section id="faq">
+    <h2>Häufige Fragen – FAQ</h2>
+    <ul>
+      {{ $faqs := .Site.GetPage "section" "faq" }}
+      {{ range $faqs.Pages }}
+      <li>
+        <strong>{{ .Params.question }}</strong><br />
+        {{ .Params.answer }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>
   
 {{ end }}
