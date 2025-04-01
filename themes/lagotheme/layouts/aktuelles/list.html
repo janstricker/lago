@@ -1,58 +1,7 @@
-{{ define "main" }}
-  <!-- Haupttitel der Seite -->
-  <h1 style="color: red;">{{ .Title }}</h1>
-  <!-- Hauptinhalt der Seite -->
+{{ define "main" }} 
   {{ .Content }}
-  
-  <!-- Beiträge aus der Sektion "aktuelles/posts" abrufen -->
-  {{ $posts := .Site.GetPage "section" "aktuelles/posts" }}
-  <!-- Titel der Beiträge anzeigen -->
-  <h2>{{ $posts.Title }}</h2>
-  {{ range $posts.Pages }}
-    <!-- Bildressourcen für den Beitrag abrufen -->
-    {{ with (.Resources.ByType "image") }}
-      <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
-    {{ else }}
-      <!-- Fallback-Text, falls kein Bild verfügbar ist -->
-      <p class="serif fallback">Kein Bild verfügbar</p>
-    {{ end }}
-    <!-- Verlinkung des Beitrags, falls aktiviert -->
-    {{ if .Params.linkEnabled }}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ else }}
-      <!-- Nur Titel anzeigen, falls Verlinkung deaktiviert ist -->
-      <h2>{{ .Title }}</h2>
-    {{ end }}
-    <!-- Zusammenfassung des Beitrags -->
-    <summary class="serif">{{ .Summary }}</summary>
-    <!-- Veröffentlichungsdatum formatieren -->
-    <p>{{ .Date | time.Format ":date_medium" }}</p>
-    <!-- Optionaler Kredittext -->
-    {{ with .Params.credit }}
-      <p>{{ . }}</p>
-    {{ end }}
-  {{ end }}
 
-  <!-- Archiv aus der Sektion "aktuelles/archiv" abrufen -->
-  {{ $archiv := .Site.GetPage "section" "aktuelles/archiv" }}
-  <!-- Titel des Archivs anzeigen -->
-  <h2>{{$archiv.Title}}</h2>
-  {{ range $archiv.Pages }}
-    <!-- Bildressourcen für Archivbeiträge abrufen -->
-    {{ with (.Resources.ByType "image") }}
-      <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
-    {{ else }}
-      <!-- Fallback-Text, falls kein Bild verfügbar ist -->
-      <p class="fallback">Kein Bild verfügbar</p>
-    {{ end }}
-    <!-- Verlinkung des Archivbeitrags, falls aktiviert -->
-    {{ if .Params.linkEnabled }}
-      <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
-    {{ else }}
-      <!-- Nur Titel anzeigen, falls Verlinkung deaktiviert ist -->
-      <h2>{{ .Title }}</h2>
-    {{ end }}
-    <!-- Zusammenfassung des Archivbeitrags -->
-    <summary class="serif">{{ .Summary }}</summary>
-  {{ end }}
+  {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" .) }}
+  {{ partial "posts.html" (dict "id" "archiv" "section" "aktuelles/archiv" "context" .) }}
+
 {{ end }}

@@ -1,0 +1,12 @@
+<section id="faq">
+    <h2>Häufige Fragen – FAQ</h2>
+    <ul class="serif ">
+      {{ $faqs := .Site.GetPage "section" "faq" }}
+      {{ range $faqs.Pages }}
+      <li>
+        <strong>{{ .Params.question }}</strong><br />
+        {{ .Params.answer }}
+      </li>
+      {{ end }}
+    </ul>
+  </section>

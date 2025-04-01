@@ -1,4 +1,4 @@
 +++
-name = 'vorname nachname'
-position = 'amt'
+name = 'Martina Wirth'
+position = 'Erste Vorsitzende'
 +++

@@ -1,4 +1,4 @@
 +++
-name = 'vorname nachname'
-position = 'amt'
+name = 'Lena Wirth'
+position = 'Head of Taucherverfangen'
 +++

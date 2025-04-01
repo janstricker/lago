@@ -1,0 +1,29 @@
+<section class="posts" id="{{ .id }}">
+  {{ $posts := .context.Site.GetPage "section" .section }}
+  <h2>{{ $posts.Title }}</h2>
+  {{ range $posts.Pages }}
+    <div class="postWrapper">
+      <div class="block post">
+        <div class="blockContent post">
+          <p>{{ .Date | time.Format ":date_medium" }}</p>
+          {{ with .Params.credit }}
+          <p>{{ . }}</p>
+          {{ end }}
+        </div>
+        {{ with .Resources.ByType "image" }}
+          <img class="blockImage" src="{{ (index . 0).RelPermalink }}" alt="{{ $posts.Title }}" />
+          {{ else }}
+          <div class="noImage">Kein Bild verfügbar</div>
+        {{ end }}
+      </div>
+      <div class="postContent">
+        <h3>
+          {{ if .Params.linkEnabled }} <a href="{{ .Permalink }}">{{ .Title }}</a>
+          {{ else }} {{ .Title }}
+          {{ end }}
+        </h3>
+        <summary class="serif">{{ .Summary }}</summary>
+      </div>
+    </div>
+  {{ end }}
+</section>

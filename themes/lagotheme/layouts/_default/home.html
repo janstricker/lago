@@ -3,56 +3,29 @@
   {{ .Content }}
 
   <section id="stage">
-    <h1>{{ .Params.heading }}</h1>
-    {{ with .Resources.GetMatch "homepage/hero.*" }}
-      <img class="stageImg" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.heroText}}" />
-    {{ end }}
-    {{ if .Params.isOpen }}
-      {{ with .Resources.GetMatch "homepage/open.*" }}
-      <img class="stageImg" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.openText}}" />
-      {{ end }}
-      <p class ="open">Geöffnet</p> <p>{{ .Params.openText }}</p>
-    {{ else }}
-      {{ with .Resources.GetMatch "homepage/closed.*" }}
-      <img class="stageImg" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.closedText}}" />
-      {{ end }}
-      <p class ="closed">Geschlossen</p> <p>{{ .Params.closedText }}</p>
-    {{ end }}
-  </section>
-
-  <section>
-    <h2>Aktuelles</h2>
-    <ul>
-        {{ $posts := .Site.GetPage "section" "aktuelles/posts" }}
-        {{ range $posts.Pages }}
-        <li>
-        {{ with (.Resources.ByType "image") }}
-            <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
+    <div class="block stage">
+      <div class="blockContent stage">
+          {{ if .Params.isOpen }}
+          <p class ="open">Geöffnet</p> <p>{{ .Params.openText }}</p>
           {{ else }}
-            <p class="fallback">Kein Bild verfügbar</p>
+          <p class ="closed">Geschlossen</p> <p>{{ .Params.closedText }}</p>
           {{ end }}
-          {{ if .Params.linkEnabled }}
-            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-          {{ else }}
-            <h3>{{ .Title }}</h3>
+          <h2 class="serif">{{ .Params.heading }}</h2>
+      </div>
+        {{ if .Params.isOpen }}
+          {{ with .Resources.GetMatch "homepage/open.*" }}
+          <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.openText}}" />
           {{ end }}
-          <summary class="serif">{{ .Summary }}</summary>
+        {{ else }}
+          {{ with .Resources.GetMatch "homepage/closed.*" }}
+          <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.closedText}}" />
+          {{ end }}
         {{ end }}
-      </li>
-    </ul>
-  </section>
+    </div>
+</section>
 
-  <section id="faq">
-    <h2>Häufige Fragen – FAQ</h2>
-    <ul class="serif ">
-      {{ $faqs := .Site.GetPage "section" "faq" }}
-      {{ range $faqs.Pages }}
-      <li>
-        <strong>{{ .Params.question }}</strong><br />
-        {{ .Params.answer }}
-      </li>
-      {{ end }}
-    </ul>
-  </section>
+  {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" .) }}
+
+  {{ partial "faq.html" . }}
   
 {{ end }}

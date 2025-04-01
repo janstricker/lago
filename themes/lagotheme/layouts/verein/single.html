@@ -7,13 +7,13 @@
     {{ if $vorstand }}
       {{ range $vorstand.Pages }}
         {{ if eq .Kind "page" }}
-          <div class="memberCard">
-            <div class="memberInfo">
+          <div class="block member">
+            <div class="blockContent">
               <p class="memberRole">{{ .Params.position }}</p>
               <p class="memberName">{{ .Params.name }}</p>              
             </div>
             {{ with .Resources.ByType "image" }}
-              <img class="memberImage" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Params.name }}" />
+              <img class="blockImage" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Params.name }}" />
             {{ end }}
           </div>
         {{ end }}
