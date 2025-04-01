@@ -2,20 +2,24 @@
   <h1 style="color: blue;">{{ .Title }}</h1>
   {{ .Content }}
   
-  {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
-  {{ if $vorstand }}
-    {{ range $vorstand.Pages }}
-      {{ if eq .Kind "page" }}
-        <div>
-          {{ with .Resources.ByType "image" }}
-            <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Params.name }}" />
-          {{ end }}
-          <h2>{{ .Params.name }}</h2>
-          <p>{{ .Params.position }}</p>
-        </div>
+  <section class="members">
+    {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
+    {{ if $vorstand }}
+      {{ range $vorstand.Pages }}
+        {{ if eq .Kind "page" }}
+          <div class="memberCard">
+            <div class="memberInfo">
+              <p class="memberRole">{{ .Params.position }}</p>
+              <p class="memberName">{{ .Params.name }}</p>              
+            </div>
+            {{ with .Resources.ByType "image" }}
+              <img class="memberImage" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Params.name }}" />
+            {{ end }}
+          </div>
+        {{ end }}
       {{ end }}
+    {{ else }}
+      <p>Keine Einträge gefunden.</p>
     {{ end }}
-  {{ else }}
-    <p>Keine Einträge gefunden.</p>
-  {{ end }}
+  </section>
 {{ end }}

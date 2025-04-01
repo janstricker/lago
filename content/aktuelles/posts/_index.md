@@ -1,3 +1,3 @@
 +++
-title = 'Posts'
+title = 'Das neueste vom Langer'
 +++

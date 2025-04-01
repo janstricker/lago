@@ -1,36 +1,58 @@
 {{ define "main" }}
+  <!-- Haupttitel der Seite -->
   <h1 style="color: red;">{{ .Title }}</h1>
+  <!-- Hauptinhalt der Seite -->
   {{ .Content }}
   
+  <!-- Beiträge aus der Sektion "aktuelles/posts" abrufen -->
   {{ $posts := .Site.GetPage "section" "aktuelles/posts" }}
-  <h2>Posts</h2>
+  <!-- Titel der Beiträge anzeigen -->
+  <h2>{{ $posts.Title }}</h2>
   {{ range $posts.Pages }}
+    <!-- Bildressourcen für den Beitrag abrufen -->
     {{ with (.Resources.ByType "image") }}
       <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
     {{ else }}
-      <p class="fallback">Kein Bild verfügbar</p>
+      <!-- Fallback-Text, falls kein Bild verfügbar ist -->
+      <p class="serif fallback">Kein Bild verfügbar</p>
     {{ end }}
+    <!-- Verlinkung des Beitrags, falls aktiviert -->
     {{ if .Params.linkEnabled }}
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ else }}
+      <!-- Nur Titel anzeigen, falls Verlinkung deaktiviert ist -->
       <h2>{{ .Title }}</h2>
     {{ end }}
-    <summary>{{ .Summary }}</summary>
+    <!-- Zusammenfassung des Beitrags -->
+    <summary class="serif">{{ .Summary }}</summary>
+    <!-- Veröffentlichungsdatum formatieren -->
+    <p>{{ .Date | time.Format ":date_medium" }}</p>
+    <!-- Optionaler Kredittext -->
+    {{ with .Params.credit }}
+      <p>{{ . }}</p>
+    {{ end }}
   {{ end }}
 
+  <!-- Archiv aus der Sektion "aktuelles/archiv" abrufen -->
   {{ $archiv := .Site.GetPage "section" "aktuelles/archiv" }}
-  <h2>Archiv</h2>
+  <!-- Titel des Archivs anzeigen -->
+  <h2>{{$archiv.Title}}</h2>
   {{ range $archiv.Pages }}
+    <!-- Bildressourcen für Archivbeiträge abrufen -->
     {{ with (.Resources.ByType "image") }}
       <img class="postImg" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Title }}" />
     {{ else }}
+      <!-- Fallback-Text, falls kein Bild verfügbar ist -->
       <p class="fallback">Kein Bild verfügbar</p>
     {{ end }}
+    <!-- Verlinkung des Archivbeitrags, falls aktiviert -->
     {{ if .Params.linkEnabled }}
       <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
     {{ else }}
+      <!-- Nur Titel anzeigen, falls Verlinkung deaktiviert ist -->
       <h2>{{ .Title }}</h2>
     {{ end }}
-    <summary>{{ .Summary }}</summary>
+    <!-- Zusammenfassung des Archivbeitrags -->
+    <summary class="serif">{{ .Summary }}</summary>
   {{ end }}
 {{ end }}

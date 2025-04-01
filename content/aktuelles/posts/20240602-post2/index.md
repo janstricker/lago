@@ -1,6 +1,7 @@
 +++
-publishDate = 2024-06-02
 title = 'Post 2'
+publishDate = 2024-06-02
+credit = 'Photographer'
 +++
 
 # Lorem ipsum dolor sit amet.

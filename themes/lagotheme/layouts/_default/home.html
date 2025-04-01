@@ -1,18 +1,20 @@
 {{ define "main" }}
 
-
-
   {{ .Content }}
-  
+
   <section id="stage">
+    <h1>{{ .Params.heading }}</h1>
+    {{ with .Resources.GetMatch "homepage/hero.*" }}
+      <img class="stageImg" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.heroText}}" />
+    {{ end }}
     {{ if .Params.isOpen }}
       {{ with .Resources.GetMatch "homepage/open.*" }}
-      <img class="stageImg" src="{{ .RelPermalink }}" alt="{{.Params.openText}}" />
+      <img class="stageImg" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.openText}}" />
       {{ end }}
       <p class ="open">Geöffnet</p> <p>{{ .Params.openText }}</p>
     {{ else }}
       {{ with .Resources.GetMatch "homepage/closed.*" }}
-      <img class="stageImg" src="{{ .RelPermalink }}" alt="{{.Params.closedText}}" />
+      <img class="stageImg" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.closedText}}" />
       {{ end }}
       <p class ="closed">Geschlossen</p> <p>{{ .Params.closedText }}</p>
     {{ end }}
@@ -30,11 +32,11 @@
             <p class="fallback">Kein Bild verfügbar</p>
           {{ end }}
           {{ if .Params.linkEnabled }}
-            <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
           {{ else }}
-            <h2>{{ .Title }}</h2>
+            <h3>{{ .Title }}</h3>
           {{ end }}
-          <summary>{{ .Summary }}</summary>
+          <summary class="serif">{{ .Summary }}</summary>
         {{ end }}
       </li>
     </ul>
@@ -42,7 +44,7 @@
 
   <section id="faq">
     <h2>Häufige Fragen – FAQ</h2>
-    <ul>
+    <ul class="serif ">
       {{ $faqs := .Site.GetPage "section" "faq" }}
       {{ range $faqs.Pages }}
       <li>

@@ -1,6 +1,95 @@
+/* Typography */
+html {
+  font-size: 18px;
+}
+
+@font-face {
+  font-family: 'Figtree';
+  src: url('/fonts/Figtree-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Fraunces';
+  src: url('/fonts/Fraunces-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Variables */
+:root{
+  --font-sans: 'Figtree', sans-serif;
+  --font-serif: 'Fraunces', serif;
+
+  --size-90: 0.611rem;
+  --size-80: 0.389rem;
+  --size-100: 1rem;
+  --size-200: 1.611rem;
+  --size-300: 2.611rem;
+  --size-400: 4.222rem;
+  --size-500: 6.833rem;
+
+  --spacing-80: 0.389rem;
+  --spacing-90: 0.611rem;
+  --spacing-100: 1rem;
+  --spacing-200: 1.611rem;
+  --spacing-300: 2.611rem;
+  --spacing-400: 4.222rem;
+
+  --radius-100: 0.275rem;
+  --radius-200: 0.444rem;
+  --radius-300: 0.719rem;
+  --radius-400: 1.164rem;
+
+  /* Var Color */
+  --primary_strongest:#373728;
+  --primary_medium:#bdc1bb;
+  --secondary_strong:#e1313c;
+  --primary_weakest:#e5e5e4;
+  --neutral_weakest:#ffffff;
+}
+/* Font Styles */
 body {
-  color: #222;
-  font-family: sans-serif;
+  font-family: var(--font-sans);
+}
+.serif {
+  font-family: var(--font-serif);
+}
+
+h1{
+  font-family: var(--font-serif);
+  font-size: var(--size-500);
+  font-weight: 400;
+}
+h2{
+  font-family: var(--font-serif);
+  font-size: var(--size-400);
+  font-weight: 400;
+}
+h3 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--size-300);
+}
+h4 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--size-200);
+}
+h5 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--size-100);
+}
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: var(--size-90);
+}
+
+/* Global Styles */
+body {
+  color: var(--primary_strongest);
+  background-color: var(--primary_weakest);
   line-height: 1.5;
   margin: 1rem;
   max-width: 768px;
@@ -17,10 +106,63 @@ footer {
 }
 
 a {
-  color: #00e;
+  color: inherit;
   text-decoration: none;
 }
 
+img, image {
+  border-radius: var(--radius-100);
+}
+
+/* Verein */
+
+.members {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+.memberCard {
+  position: relative;
+  aspect-ratio: 2/3;
+  flex: 0 1 calc(33.333% - 1rem);
+}
+.memberImage {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 90;
+  border-radius: var(--radius-100);
+}
+.memberInfo {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  margin: var(--spacing-90);
+  border-radius: var(--radius-400);
+  background-color: var(--primary_weakest);
+  padding: var(--spacing-100);
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+.memberName {
+  margin-block: 0;
+  font-family: var(--font-serif);
+  font-size: var(--size-200);
+  text-transform: capitalize;
+}
+.memberRole {
+  margin-block: 0;
+  font-family: var(--font-sans);
+  font-size: var(--size-100);
+  text-transform: capitalize;
+}
+
+/* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
@@ -45,6 +187,6 @@ a {
 }
 
 .footer-column ul li a {
-  text-decoration: none;
+  decoration: none;
   color: inherit;
 }
