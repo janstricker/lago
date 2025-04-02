@@ -1,5 +1,5 @@
 +++
-title = 'Post 2'
+title = 'Lorem Ipsum Dolor'
 publishDate = 2024-06-02
 credit = 'Photographer'
 +++
