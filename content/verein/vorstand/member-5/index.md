@@ -1,4 +1,4 @@
 +++
-name = 'vorname nachname'
+name = 'Hans Wurst'
 position = 'amt'
 +++

@@ -109,6 +109,7 @@ body {
   background-color: var(--primary_weakest);
   line-height: 1.5;
   max-width: 60rem;
+  margin: 0 auto;
 }
 
 main {
@@ -127,6 +128,7 @@ section {
 section#stage {
   padding: 0;
 }
+
 header {
   text-decoration: none;
 }
@@ -228,8 +230,9 @@ img, image {
 
 .members {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: stretch;
   gap: var(--spacing-100);
 }
 .memberName {
@@ -274,9 +277,8 @@ ul{
 
 /*Buttons*/
 .btn {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
+  display: inline-block;
+  width: fit-content;
   text-align: center;
   color: var(--neutral_strongest);
   background-color: transparent;
@@ -286,6 +288,7 @@ ul{
   font-size: var(--size-100);
   font-weight: 700;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn.primary {

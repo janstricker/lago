@@ -24,9 +24,9 @@
     </item>
     <item>
       <title>Post 3</title>
-      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/archiv/20220115-post3/</link>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20220115-post3/</link>
       <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
-      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/archiv/20220115-post3/</guid>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20220115-post3/</guid>
       <description>&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
     </item>
     <item>
@@ -93,6 +93,13 @@
       <description></description>
     </item>
     <item>
+      <title>Bankverbindung</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/verein/bankverbindung/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/verein/bankverbindung/</guid>
+      <description>&lt;p&gt;Förderverein Langer Teich e.V. &lt;br&gt;&#xA;IBAN: DE57 7805 0000 0200 1940 82  &lt;br&gt;&#xA;BIC: BYLADEM1HOF &lt;br&gt;&#xA;Sparkasse Hochfranken&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>Datenschutz</title>
       <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/datenschutz/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -105,6 +112,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/impressum/</guid>
       <description>&lt;h1 id=&#34;impressum&#34;&gt;Impressum&lt;/h1&gt;&#xA;&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Mitglied werden</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/verein/mitglied-werden/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/verein/mitglied-werden/</guid>
+      <description>&lt;p&gt;Um unser schönes Waldbad in seiner vollen Vielfalt zu erhalten, könnt ihr uns mit einer Mitgliedschaft unterstützen!&lt;/p&gt;&#xA;&lt;h4 id=&#34;mitgliedsbeiträge-jährlich&#34;&gt;Mitgliedsbeiträge (jährlich)&lt;/h4&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Jugendliche: 10,- €&lt;/li&gt;&#xA;&lt;li&gt;Einzelnes Mitglied: 20,- €&lt;/li&gt;&#xA;&lt;li&gt;Familie: 25,- €&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h4 id=&#34;in-3-einfachen-schritten-mitglied-werden&#34;&gt;In 3 einfachen Schritten Mitglied werden&lt;/h4&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Antragsformular herunterladen&lt;/li&gt;&#xA;&lt;li&gt;Vollständig ausfüllen und unterschreiben&lt;/li&gt;&#xA;&lt;li&gt;Bei einem Mitglied abgeben oder am Kiosk einwerfen&lt;/li&gt;&#xA;&lt;/ol&gt;</description>
     </item>
   </channel>
 </rss>

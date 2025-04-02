@@ -1,0 +1,12 @@
+<section id="{{ .id }}">
+  {{ $sectionContent := .context.Site.GetPage .page }}
+  {{ with $sectionContent }}
+    <h2 class="sectionTitle">{{ $sectionContent.Title }}</h2>
+    <p>
+      {{ $sectionContent.Content }}
+    </p>
+    {{ with $sectionContent.Params.action }}
+      <a href="{{ . }}" class="btn primary">{{$sectionContent.Params.actionTitle}}</a>
+    {{ end }}
+  {{ end }}
+</section>
