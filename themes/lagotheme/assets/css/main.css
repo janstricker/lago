@@ -97,6 +97,10 @@ p {
   margin-block: 0;
 }
 
+a {
+  color: inherit;
+}
+
 summary {
   display: block;
   font-family: var(--font-serif);
@@ -112,6 +116,33 @@ body {
   margin: 0 auto;
 }
 
+header {
+  text-decoration: none;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--spacing-200);
+  background-color: var(--primary_weakest);
+}
+.menu {
+  list-style: none;
+  font-size: var(--size-100);
+  text-decoration: none;
+  font-weight: 900;
+  display: flex;
+  flex-direction: row;
+  gap: var(--spacing-100);
+}
+.logo {
+  max-width: 8rem;
+}
+
 main {
   display: flex;
   flex-direction: column;
@@ -125,17 +156,9 @@ section {
   flex-direction: column;
   gap: var(--spacing-200);
 }
+
 section#stage {
   padding: 0;
-}
-
-header {
-  text-decoration: none;
-}
-
-a {
-  color: inherit;
-  text-decoration: underline;
 }
 
 img, image {

@@ -1,2 +1,9 @@
-<h4>{{ site.Title }}</h4>
-{{ partial "menu.html" (dict "menuID" "main" "page" .) }}
+<nav>
+    <a class="logo" href="/">{{site.Title}}</a>
+    <ul class="menu">
+        {{ range site.Menus.main }}
+          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        {{ end }}
+    </ul>
+    <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
+</nav>
