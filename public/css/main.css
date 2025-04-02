@@ -271,6 +271,27 @@ ul{
   padding: var(--spacing-100);
 }
 
+/*Buttons*/
+.btn {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  text-align: center;
+  color: var(--neutral_strongest);
+  background-color: transparent;
+  border: 0.15rem solid var(--primary_strongest);
+  border-radius: var(--radius-100);
+  padding: var(--spacing-100) var(--spacing-200);
+  font-size: var(--size-100);
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn.primary {
+  background-color: var(--secondary_strong);
+  color: var(--neutral_weakest);
+  border: none;
+}
 
 /* Footer */
 
