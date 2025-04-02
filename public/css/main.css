@@ -127,11 +127,12 @@ section#stage {
   padding: 0;
 }
 header {
+  text-decoration: none;
 }
 
 a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 
 img, image {
@@ -274,6 +275,7 @@ ul{
 /* Footer */
 
 footer {
+  text-decoration: none;
   background-color: var(--primary_medium);
   padding: var(--spacing-200);
   padding-top: calc(var(--spacing-100) * 8);
