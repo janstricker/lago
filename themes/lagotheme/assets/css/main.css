@@ -119,6 +119,9 @@ main {
 
 section {
   padding: var(--spacing-200);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-200);
 }
 section#stage {
   padding: 0;
@@ -239,6 +242,34 @@ img, image {
   font-size: var(--size-100);
   text-transform: capitalize;
 }
+
+/* FAQ */
+
+ul{
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+
+.faq {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
+}
+.faqItem {
+  gap: var(--spacing-80);
+}
+
+.faq.question {
+  font-family: var(--font-serif);
+  margin-bottom: var(--spacing-100);
+}
+.faq.answer {
+  background-color: var(--primary_medium);
+  border-radius: var(--radius-100);
+  padding: var(--spacing-100);
+}
+
 
 /* Footer */
 
