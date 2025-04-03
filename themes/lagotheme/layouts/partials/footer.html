@@ -4,7 +4,7 @@
       <h5>Inhalt</h5>
       <ul>
         {{ range site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}" class=" menuItem {{ if eq .URL $.RelPermalink }}active{{ end }}">{{ .Name }}</a></li>
         {{ end }}
         <li><a href="/legal/impressum">Impressum</a></li>
         <li><a href="/legal/datenschutz">Datenschutz</a></li>

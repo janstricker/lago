@@ -1,8 +1,11 @@
+<!DOCTYPE html>
 <nav>
     <a class="logo" href="/">{{site.Title}}</a>
     <ul class="menu">
         {{ range site.Menus.main }}
-          <li><a href="{{ .URL }}">{{ .Name }}</a></li>
+          <li>
+            <a href="{{ .URL }}" class="menuItem {{ if eq .URL $.RelPermalink }}active{{ end }}">{{ .Name }}</a>
+          </li>
         {{ end }}
     </ul>
     <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
