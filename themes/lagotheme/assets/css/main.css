@@ -64,6 +64,10 @@ h1{
   font-weight: 400;
   margin-block: 0;
 }
+h1.home {
+  font-family: var(--font-sans);
+  font-size: var(--size-100);
+}
 h2{
   font-size: var(--size-300);
   line-height: 110%;
@@ -183,7 +187,23 @@ section {
   gap: var(--spacing-200);
 }
 
+.gap-0 {
+  gap:0;
+}
+.gap-80 {
+  gap: var(--spacing-80);
+}
+.gap-90 {
+  gap: var(--spacing-90);
+}
+.gap-100 {
+  gap: var(--spacing-100);
+}
 
+ul, ol {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
 
 section#stage {
   padding: 0;
@@ -247,7 +267,22 @@ img, image {
 }
 
 .blockContent.stage {
-  gap: var(--spacing-90);
+  gap: var(--spacing-100);
+}
+.indicator {
+  font-weight: 700;
+  padding: var(--spacing-80) var(--spacing-90);
+  border-radius: var(--radius-100);
+  margin-right: var(--spacing-80);
+}
+.open {
+  color: #5B6E16;
+  background-color: hsla(73, 47%, 37%, 0.135);
+}
+.closed {
+  color: #A2151E;
+  background-color: #a2151e20;
+  ;
 }
 
 .blockContent.post {
@@ -301,11 +336,6 @@ img, image {
 
 /* FAQ */
 
-ul{
-  margin-block-start: 0;
-  margin-block-end: 0;
-  padding-inline-start: 0;
-}
 
 .faq {
   display: flex;

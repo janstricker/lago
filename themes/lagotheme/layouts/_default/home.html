@@ -5,12 +5,13 @@
   <section id="stage">
     <div class="block stage">
       <div class="blockContent stage">
+          <h1 class="home">{{ .Params.smallTitle }}</h1>
+          <h2 class="serif">{{ .Params.largeTitle }}</h2>
           {{ if .Params.isOpen }}
-          <p class ="open">Geöffnet</p> <p>{{ .Params.openText }}</p>
+          <p> <span class ="indicator open">{{.Params.openCallout}}</span> {{.Params.openText}}</p>
           {{ else }}
-          <p class ="closed">Geschlossen</p> <p>{{ .Params.closedText }}</p>
+          <p> <span class ="indicator closed">{{.Params.closedCallout}}</span> {{.Params.closedText}}</p>
           {{ end }}
-          <h2 class="serif">{{ .Params.heading }}</h2>
       </div>
         {{ if .Params.isOpen }}
           {{ with .Resources.GetMatch "homepage/open.*" }}
