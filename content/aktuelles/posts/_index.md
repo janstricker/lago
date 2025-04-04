@@ -1,3 +1,3 @@
 +++
-title = 'Das neueste vom Langer'
+title = ''
 +++

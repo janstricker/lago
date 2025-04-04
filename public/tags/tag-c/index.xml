@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Förderverein Langer Teich e.V.</title>
-    <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/</link>
-    <description>Recent content on Förderverein Langer Teich e.V.</description>
+    <title>Tag C on Förderverein Langer Teich e.V.</title>
+    <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/tag-c/</link>
+    <description>Recent content in Tag C on Förderverein Langer Teich e.V.</description>
     <generator>Hugo</generator>
     <language>de</language>
-    <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Post 1</title>
-      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</link>
-      <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</guid>
-      <description>Labore et dolore magna.</description>
-    </item>
+    <lastBuildDate>Sun, 02 Jun 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/tag-c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lorem Ipsum Dolor</title>
       <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240602-post2/</link>
