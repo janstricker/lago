@@ -1,4 +1,5 @@
 {{- $cssFiles := resources.Match "css/*.css" }}
+{{- $cssFiles := resources.Match "css/*.css" }}
 {{- range $cssFiles }}
   {{- if eq hugo.Environment "development" }}
     <link rel="stylesheet" href="{{ .RelPermalink }}">

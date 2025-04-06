@@ -1,10 +1,5 @@
 {{ define "main" }} 
-  <section class="contentHeader">
-    <h1 class="sans">{{ .Title }}</h1>
-    {{.Content}}
-  </section>
-
+  {{ partial "contentHeader" . }}
   {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" .) }}
   {{ partial "posts.html" (dict "id" "archiv" "section" "aktuelles/archiv" "context" .) }}
-
 {{ end }}

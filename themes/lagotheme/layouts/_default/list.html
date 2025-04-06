@@ -1,8 +1,5 @@
 {{ define "main" }}
-  <section class="contentHeader">
-    <h1 class="sans">{{ .Title }}</h1>
-    {{.Content}}
-  </section>
+{{ partial "contentHeader" . }}
   {{ range .Pages }}
     <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
     {{ .Summary }}

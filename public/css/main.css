@@ -115,7 +115,6 @@ a {
   margin-left: calc(var(--spacing-90) * -1);
   transition: all 0.2s ease-in-out;
   border-radius: var(--radius-100);
-
 }
 
 a:hover {
@@ -434,4 +433,27 @@ footer {
   gap: var(--spacing-100);
   list-style: none;
   padding: 0;
+}
+
+.galleryContainer {
+}
+.galleryHeading {
+  
+}
+.galleryImages {
+  padding-inline-start: 0;
+  list-style: none;
+  overflow: auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  gap: var(--spacing-100);
+}
+a.lightbox-image {
+  color: transparent;
+  padding: 0;
+  margin-left: 0;
+  transition: all 0.2s ease-in-out;
 }
