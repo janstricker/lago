@@ -1,3 +1,5 @@
+defaultContentLanguage = 'de'
+
 [[menus.main]]
 name = 'Start'
 pageRef = '/'
