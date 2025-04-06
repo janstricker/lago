@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/</loc>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/</loc>
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/</loc>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/</loc>
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</loc>
@@ -14,10 +14,28 @@
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/</loc>
     <lastmod>2024-09-19T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/veranstaltung/</loc>
+    <lastmod>2024-09-19T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240602-post2/</loc>
     <lastmod>2024-06-02T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/sport/</loc>
+    <lastmod>2024-06-02T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/stadt-selb/</loc>
+    <lastmod>2024-06-02T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20220115-post3/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/spende/</loc>
+    <lastmod>2022-01-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/verein/</loc>
     <lastmod>2022-01-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/archiv/</loc>
@@ -57,8 +75,6 @@
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/legal/</loc>
   </url><url>
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/verein/mitglied-werden/</loc>
-  </url><url>
-    <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/tags/</loc>
   </url><url>
     <loc>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/verein/</loc>
   </url><url>

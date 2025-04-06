@@ -14,7 +14,7 @@ pageRef = '/verein'
 weight = 30
 
 [[menus.main]]
-name = 'Der Lago'
+name = 'Unser "Lago"'
 pageRef = '/der-lago'
 weight = 40
 

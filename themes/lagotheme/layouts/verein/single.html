@@ -1,6 +1,8 @@
 {{ define "main" }}
-  {{ .Content }}
-  
+  <section class="contentHeader">
+    <h1 class="sans">{{ .Title }}</h1>
+    {{.Content}}
+  </section>
   <section id="vorstand">
     {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
     {{ if $vorstand }}
