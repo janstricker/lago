@@ -215,6 +215,7 @@ ul, ol {
 
 section#stage {
   height: calc(100vh - var(--size-500) - var(--size-200));
+  max-height: 40rem;
   padding: 0;
 }
 
