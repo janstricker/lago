@@ -1,5 +1,6 @@
 {{ define "main" }}
 
+
 <section id="stage">
   <div class="block stage">
     <div class="blockContent stage">
@@ -8,7 +9,16 @@
         {{ if .Params.isOpen }}
         <p> <span class ="indicator open">{{.Params.openCallout}}</span> {{.Params.openText}}</p>
         {{ else }}
-        <p> <span class ="indicator closed">{{.Params.closedCallout}}</span> {{.Params.closedText}}</p>
+        <p> <span class ="indicator closed">{{.Params.closedCallout}}</span>
+        {{ if .Params.openingDate }}
+        {{ $now := now.UTC | time.Format "2006-01-02" | time }}
+        {{ $openingDate := time .Params.openingDate | time }}
+        {{ $daysUntil := div ($openingDate.Sub $now).Hours 24 | int }}
+        Noch {{ $daysUntil }} Tage bis zur Eröffnung.
+        {{else}}
+        {{.Params.closedText}} 
+        </p>
+        {{ end }}
         {{ end }}
     </div>
       {{ if .Params.isOpen }}

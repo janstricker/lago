@@ -1,13 +1,13 @@
 +++
 title = 'Startseite'
-# smallTitle = h1
-smallTitle = 'Freibad Langer Teich in Selb'
-# largeTitle = h2
-largeTitle = 'Waldbaden auf Selberisch'
-isOpen = ''
+smallTitle = 'Freibad Langer Teich in Selb' # = h1
+largeTitle = 'Waldbaden auf Selberisch' # = h2
 [params]
-    openCallout = 'Geöffnet'
-    openText = 'Täglich 9:00 - 20:00 Uhr'
-    closedCallout = 'Derzeit Geschlossen'
-    closedText = 'Nur im Sommer geöffnet'
+    isOpen = '' # '[Leer]' = Geschlossen, Jeder Wert (z.B. 'x') = Geöffnet
+    openCallout = 'Geöffnet' # Grün hinterlegt
+    openText = 'Täglich 9:00 - 20:00 Uhr' 
+
+    openingDate = '2025-06-30' # Datum der Eröffnung 'YYYY-MM-DD'
+    closedCallout = 'Derzeit Geschlossen' # Rot hinterlegt
+    closedText = 'Nur im Sommer geöffnet' # Wird angezeigt, wenn kein openingDate definiert ist
 +++
