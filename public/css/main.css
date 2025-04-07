@@ -260,7 +260,6 @@ figure {
   flex-basis: 100%;
 }
 .block.member {
-  flex-basis:calc(33.333% - var(--spacing-100));
   aspect-ratio: 2/3;
 }
 .block.post {
@@ -364,11 +363,9 @@ figure {
 }
 
 .members {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: stretch;
-  gap: var(--spacing-100);
+  display: grid;
+  gap: var(--spacing-200);
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 .memberName {
   font-family: var(--font-serif);
