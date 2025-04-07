@@ -1,0 +1,41 @@
+<figure class="block standalone {{ with .Get "class" }}{{ . }}{{ end }}">
+  {{- if .Get "link" -}}
+    <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+  {{- end -}}
+
+  {{- $u := urls.Parse (.Get "src") -}}
+  {{- $src := $u.String -}}
+  {{- if not $u.IsAbs -}}
+    {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
+      {{- $src = .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+
+  <img class ="blockImage" src="{{ $src }}"
+    {{- if or (.Get "alt") (.Get "caption") }}
+    alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
+    {{- end -}}
+    {{- with .Get "width" }} width="{{ . }}"{{ end -}}
+    {{- with .Get "height" }} height="{{ . }}"{{ end -}}
+    {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
+  ><!-- Closing img tag -->
+  {{- if .Get "link" }}</a>{{ end -}}
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "credit") -}}
+    <figcaption class="blockContent">
+      {{- if .Get "credit" }}<p class="credit">
+        {{- with .Get "creditlink" }}
+          <a href="{{ . }}">
+        {{- end -}}
+        {{- .Get "credit" | markdownify -}}
+        {{- if .Get "creditlink" }}</a>{{ end }}
+      </p>{{ end }}
+      {{ with (.Get "title") -}}
+        {{ . }}
+      {{- end -}}
+      {{- if .Get "caption" }}<p class="caption">
+        {{- .Get "caption" | markdownify -}}
+      </p>{{ end }}
+
+    </figcaption>
+  {{- end }}
+</figure>

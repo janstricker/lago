@@ -1,0 +1,5 @@
+{{ define "main" }} 
+  {{ partial "contentHeader" . }}
+  {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" .) }}
+  {{ partial "posts.html" (dict "id" "archiv" "section" "aktuelles/archiv" "context" .) }}
+{{ end }}

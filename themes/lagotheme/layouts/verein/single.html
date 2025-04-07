@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{ partial "contentHeader" . }}
+{{ partial "content" . }}
+  <section id="vorstand">
+    {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
+    {{ if $vorstand }}
+      <h2 class="sectionTitle">Vorstand</h2>
+      <div class="members">
+        {{ range $vorstand.Pages }}
+          {{ if eq .Kind "page" }}
+            <div class="block member">
+              <div class="blockContent">
+                <p class="memberRole">{{ .Params.position }}</p>
+                <p class="memberName">{{ .Params.name }}</p>              
+              </div>
+              {{ with .Resources.ByType "image" }}
+                <img class="blockImage" src="{{ (index . 0).RelPermalink }}" alt="{{ $.Params.name }}" />
+              {{ end }}
+            </div>
+          {{ end }}
+        {{ end }}
+      </div>
+    {{ else }}
+      <p>Keine Einträge gefunden.</p>
+    {{ end }}
+  </section>
+  {{ partial "flexible-section.html" (dict "id" "mitglied-werden" "page" "verein/info/mitglied-werden" "context" .) }}
+  {{ partial "flexible-section.html" (dict "id" "bankverbindung" "page" "verein/info/bankverbindung" "context" .) }}
+  {{ partial "flexible-section.html" (dict "id" "kontakt" "page" "verein/info/kontakt" "context" .) }}
+{{ end }}

@@ -1,0 +1,26 @@
+defaultContentLanguage = 'de'
+
+[[menus.main]]
+name = 'Start'
+pageRef = '/'
+weight = 10
+
+[[menus.main]]
+name = 'Aktuelles'
+pageRef = '/aktuelles'
+weight = 20
+
+[[menus.main]]
+name = 'Verein'
+pageRef = '/verein'
+weight = 30
+
+[[menus.main]]
+name = 'Unser "Lago"'
+pageRef = '/der-lago'
+weight = 40
+
+[module]
+  [module.hugoVersion]
+    extended = false
+    min = "0.116.0"

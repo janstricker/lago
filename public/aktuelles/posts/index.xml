@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Förderverein Langer Teich e.V.</title>
+    <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/</link>
+    <description>Recent content on Förderverein Langer Teich e.V.</description>
+    <generator>Hugo</generator>
+    <language>de</language>
+    <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Post 1</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0000</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/</guid>
+      <description>Labore et dolore magna.</description>
+    </item>
+    <item>
+      <title>Lorem Ipsum Dolor</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240602-post2/</link>
+      <pubDate>Sun, 02 Jun 2024 00:00:00 +0000</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240602-post2/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Post 3</title>
+      <link>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20220115-post3/</link>
+      <pubDate>Sat, 15 Jan 2022 00:00:00 +0000</pubDate>
+      <guid>https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20220115-post3/</guid>
+      <description>&lt;p&gt;Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
