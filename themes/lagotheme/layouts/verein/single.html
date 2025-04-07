@@ -1,5 +1,6 @@
 {{ define "main" }}
 {{ partial "contentHeader" . }}
+{{ partial "content" . }}
   <section id="vorstand">
     {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
     {{ if $vorstand }}

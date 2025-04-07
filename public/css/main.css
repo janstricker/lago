@@ -260,6 +260,7 @@ figure {
   flex: 0 1 calc(100%);
 }
 .block.standalone.small {
+  aspect-ratio: 2/3;
   flex: 0 1 calc(50% - var(--spacing-100));
 }
 
