@@ -1,7 +1,14 @@
 <section class="posts" id="{{ .id }}">
   {{ $posts := .context.Site.GetPage "section" .section }}
   <h2>{{ $posts.Title }}</h2>
-  {{ range $posts.Pages }}
+  {{ $pages := slice }} <!-- Initialisierung der Variable -->
+  {{ $limit := .postLimit }}
+  {{ if $limit }}
+    {{ $pages = first $limit $posts.Pages }}
+  {{ else }}
+    {{ $pages = $posts.Pages }}
+  {{ end }}
+  {{ range $pages }}
     <div class="postWrapper">
       <div class="block post">
         <div class="blockContent post">

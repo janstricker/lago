@@ -1,32 +1,29 @@
 {{ define "main" }}
 
-  {{ .Content }}
-
-  <section id="stage">
-    <div class="block stage">
-      <div class="blockContent stage">
-          <h1 class="home">{{ .Params.smallTitle }}</h1>
-          <h2 class="serif">{{ .Params.largeTitle }}</h2>
-          {{ if .Params.isOpen }}
-          <p> <span class ="indicator open">{{.Params.openCallout}}</span> {{.Params.openText}}</p>
-          {{ else }}
-          <p> <span class ="indicator closed">{{.Params.closedCallout}}</span> {{.Params.closedText}}</p>
-          {{ end }}
-      </div>
+<section id="stage">
+  <div class="block stage">
+    <div class="blockContent stage">
+        <h1 class="home">{{ .Params.smallTitle }}</h1>
+        <h2 class="serif">{{ .Params.largeTitle }}</h2>
         {{ if .Params.isOpen }}
-          {{ with .Resources.GetMatch "homepage/open.*" }}
-          <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.openText}}" />
-          {{ end }}
+        <p> <span class ="indicator open">{{.Params.openCallout}}</span> {{.Params.openText}}</p>
         {{ else }}
-          {{ with .Resources.GetMatch "homepage/closed.*" }}
-          <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.closedText}}" />
-          {{ end }}
+        <p> <span class ="indicator closed">{{.Params.closedCallout}}</span> {{.Params.closedText}}</p>
         {{ end }}
+    </div>
+      {{ if .Params.isOpen }}
+        {{ with .Resources.GetMatch "homepage/open.*" }}
+        <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.openText}}" />
+        {{ end }}
+      {{ else }}
+        {{ with .Resources.GetMatch "homepage/closed.*" }}
+        <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.closedText}}" />
+        {{ end }}
+      {{ end }}
     </div>
 </section>
 
-  {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" .) }}
-
+  {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" . "postLimit" 2) }}
   {{ partial "faq.html" . }}
   
 {{ end }}
