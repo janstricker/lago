@@ -195,6 +195,13 @@ section {
   gap: var(--spacing-200);
 }
 
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: var(--spacing-200);
+}
+
 .gap-0 {
   gap:0;
 }
@@ -260,9 +267,10 @@ figure {
   aspect-ratio: 4/3;
   flex: 0 1 calc(100%);
 }
+
 .block.standalone.small {
   aspect-ratio: 2/3;
-  flex: 0 1 calc(50% - var(--spacing-100));
+  max-width: calc(50% - var(--spacing-100));
 }
 
 .blockImage {
@@ -469,7 +477,7 @@ footer {
   flex-wrap: wrap;
   justify-content: flex-start;
   align-content: flex-start;
-  gap: var(--spacing-100);
+  gap: var(--spacing-200);
 }
 a.lightbox-image {
   color: transparent;

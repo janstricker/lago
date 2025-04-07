@@ -20,19 +20,22 @@
     {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
   ><!-- Closing img tag -->
   {{- if .Get "link" }}</a>{{ end -}}
-  {{- if or (or (.Get "title") (.Get "caption")) (.Get "attr") -}}
+  {{- if or (or (.Get "title") (.Get "caption")) (.Get "credit") -}}
     <figcaption class="blockContent">
+      {{- if .Get "credit" }}<p class="credit">
+        {{- with .Get "creditlink" }}
+          <a href="{{ . }}">
+        {{- end -}}
+        {{- .Get "credit" | markdownify -}}
+        {{- if .Get "creditlink" }}</a>{{ end }}
+      </p>{{ end }}
       {{ with (.Get "title") -}}
         {{ . }}
       {{- end -}}
-      {{- if or (.Get "caption") (.Get "attr") -}}<p class="caption">
+      {{- if .Get "caption" }}<p class="caption">
         {{- .Get "caption" | markdownify -}}
-        {{- with .Get "attrlink" }}
-          <a href="{{ . }}">
-        {{- end -}}
-        {{- .Get "attr" | markdownify -}}
-        {{- if .Get "attrlink" }}</a>{{ end }}</p>
-      {{- end }}
+      </p>{{ end }}
+
     </figcaption>
   {{- end }}
 </figure>

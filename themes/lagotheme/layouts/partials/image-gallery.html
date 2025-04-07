@@ -1,5 +1,5 @@
 <section class="galleryContainer">
-  <h4 class="galleryHeading">Galerie</h4>
+  <h3 class="galleryHeading">Galerie</h3>
     {{ $dir := string .gallery_dir }}
     <ul class="galleryImages">
     {{ range .context.Resources.Match (print $dir "/*") }}

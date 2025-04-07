@@ -8,23 +8,26 @@ intro = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonum
   src="/images/volleyball.png"
   alt="Volleyballturnier"
   caption="Volleyballturnier am Langer"
+  credit="Fotograf"
+  creditlink="https://www.fotograf.de/"
   class=""
 >}}
-
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 {{< figure
-  src="/images/volleyball.png"
-  alt="Volleyballturnier"
-  caption="Volleyballturnier am Langer"
+  src="/images/platsche.png"
+  alt="Platsche"
+  caption="Schön wegplatschen"
+  credit=""
+  creditlink=""
   class="small"
 >}}
 {{< figure
-  src="/images/volleyball.png"
-  alt="Volleyballturnier"
-  caption="Volleyballturnier am Langer"
+  src="/images/sprungbrett.png"
+  alt="Sprungbrett"
+  caption="Schön nei hupfen"
+  credit=""
+  creditlink=""
   class="small"
 >}}
-
-
 At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
