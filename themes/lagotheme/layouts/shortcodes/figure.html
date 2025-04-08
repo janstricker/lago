@@ -6,12 +6,16 @@
   {{- $u := urls.Parse (.Get "src") -}}
   {{- $src := $u.String -}}
   {{- if not $u.IsAbs -}}
-    {{- with or (.Page.Resources.Get $u.Path) (resources.Get $u.Path) -}}
-      {{- $src = .RelPermalink -}}
+    {{- with or (.Page.Resources.GetMatch $u.Path) (resources.GetMatch $u.Path) -}}
+      {{- $resized := .Fit "1200x1200" -}}
+      {{- $processed := $resized.Process "webp q75" -}}
+      {{- $src = $processed.RelPermalink -}}
+    {{- else -}}
+      {{- $src = $u.Path -}}
     {{- end -}}
   {{- end -}}
 
-  <img class ="blockImage" src="{{ $src }}"
+  <img class="blockImage" src="{{ $src }}"
     {{- if or (.Get "alt") (.Get "caption") }}
     alt="{{ with .Get "alt" }}{{ . }}{{ else }}{{ .Get "caption" | markdownify| plainify }}{{ end }}"
     {{- end -}}
