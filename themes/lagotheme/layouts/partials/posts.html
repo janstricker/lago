@@ -29,8 +29,10 @@
             {{ end }}
           </div>
         </div>
-        {{ with .Resources.ByType "image" }}
-          <img class="blockImage" src="{{ (index . 0).RelPermalink }}" alt="{{ $posts.Title }}" />
+        {{ $image := .Resources.ByType "image" }}
+        {{ with (index $image 0) }}
+        {{ $resized := .Fit "800x800 webp q75" }}
+          <img class="blockImage" src="{{ $resized.RelPermalink }}" alt="{{ $posts.Title }}" />
           {{ else }}
           <div class="noImage">Kein Bild verfügbar</div>
         {{ end }}

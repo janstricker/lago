@@ -24,12 +24,14 @@
         </div>
     </div>
       {{ if .Params.isOpen }}
-        {{ with .Resources.GetMatch "homepage/open.*" }}
-        <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.openText}}" />
+      {{ $image := .Resources.GetMatch "homepage/open.*" }}
+        {{ with $image.Fill "1024x720 webp q75" }}
+        <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich in Selb in der Sommersaison" />
         {{ end }}
       {{ else }}
-        {{ with .Resources.GetMatch "homepage/closed.*" }}
-        <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich – {{.Params.closedText}}" />
+        {{ $image := .Resources.GetMatch "homepage/closed.*" }}
+        {{ with $image.Fill "1024x720 webp q75" }}
+        <img class="blockImage" src="{{ .RelPermalink }}" alt="Waldbad Langer Teich in Selb außerhalb der Saison" />
         {{ end }}
       {{ end }}
     </div>

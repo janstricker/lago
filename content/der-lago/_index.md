@@ -5,7 +5,7 @@ intro = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonum
 +++
 
 {{< figure
-  src="/images/volleyball.png"
+  src="/images/volleyball.jpg"
   alt="Volleyballturnier"
   caption="Volleyballturnier am Langer"
   credit="Fotograf"
@@ -15,15 +15,15 @@ intro = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonum
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 {{< figure
-  src="/images/platsche.png"
+  src="/images/boot.jpg"
   alt="Platsche"
-  caption="Schön wegplatschen"
+  caption="Boot"
   credit=""
   creditlink=""
   class="small"
 >}}
 {{< figure
-  src="/images/sprungbrett.png"
+  src="/images/wasser.jpg"
   alt="Sprungbrett"
   caption="Schön nei hupfen"
   credit=""

@@ -1,10 +1,10 @@
-<section class="gap-90" id="{{ .id }}">
+<section class="flexibleSection" id="{{ .id }}">
   {{ $sectionContent := .context.Site.GetPage .page }}
   {{ with $sectionContent }}
     <h3 class="sectionTitle">{{ $sectionContent.Title }}</h3>
-    <p>
-      {{ $sectionContent.Content }}
-    </p>
+    <div class="flexible">
+        {{ $sectionContent.Content }}
+    </div>
     {{ with $sectionContent.Params.action }}
       <a href="{{ . }}" class="btn primary">{{$sectionContent.Params.actionTitle}}</a>
     {{ end }}
