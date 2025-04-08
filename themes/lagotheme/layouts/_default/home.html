@@ -6,20 +6,22 @@
     <div class="blockContent stage">
         <h1 class="home">{{ .Params.smallTitle }}</h1>
         <h2 class="serif">{{ .Params.largeTitle }}</h2>
-        {{ if .Params.isOpen }}
-        <p> <span class ="indicator open">{{.Params.openCallout}}</span> {{.Params.openText}}</p>
-        {{ else }}
-        <p> <span class ="indicator closed">{{.Params.closedCallout}}</span>
-        {{ if .Params.openingDate }}
-        {{ $now := now.UTC | time.Format "2006-01-02" | time }}
-        {{ $openingDate := time .Params.openingDate | time }}
-        {{ $daysUntil := div ($openingDate.Sub $now).Hours 24 | int }}
-        Noch {{ $daysUntil }} Tage bis zur Eröffnung.
-        {{else}}
-        {{.Params.closedText}} 
-        </p>
-        {{ end }}
-        {{ end }}
+        <div class="openingInfo">
+          {{ if .Params.isOpen }}
+          <p class ="indicator open">{{.Params.openCallout}}</p> <p>{{.Params.openText}}</p>
+          {{ else }}
+          <p class ="indicator closed">{{.Params.closedCallout}}</p>
+          {{ if .Params.openingDate }}
+          {{ $now := now.UTC | time.Format "2006-01-02" | time }}
+          {{ $openingDate := time .Params.openingDate | time }}
+          {{ $daysUntil := div ($openingDate.Sub $now).Hours 24 | int }}
+          <p>Noch <strong>{{ $daysUntil }}</strong> Tage bis zur Eröffnung am {{ .Params.openingDate | time.Format ":date_medium" }}</p>
+          {{else}}
+          {{.Params.closedText}} 
+          </p>
+          {{ end }}
+          {{ end }}
+        </div>
     </div>
       {{ if .Params.isOpen }}
         {{ with .Resources.GetMatch "homepage/open.*" }}

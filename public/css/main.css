@@ -210,6 +210,7 @@ nav {
 main {
   display: flex;
   flex-direction: column;
+  gap: var(--spacing-400);
   padding: 0 var(--spacing-200);
   margin: auto;
 }
@@ -297,6 +298,14 @@ figure {
   gap: var(--spacing-100);
 }
 
+.openingInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-90);
+}
+
 .indicator {
   padding: var(--spacing-80) var(--spacing-90);
   margin-right: var(--spacing-80);
@@ -345,7 +354,7 @@ figure {
 .posts {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--spacing-400);
+  gap: var(--spacing-200);
 }
 
 .postWrapper {
@@ -354,6 +363,12 @@ figure {
   align-items: start;
   gap: var(--spacing-100);
   width: 100%;
+  padding-bottom: var(--spacing-200);
+  border-bottom: 1px solid var(--primary_medium);
+}
+
+.postWrapper:last-child {
+  border-bottom: none;
 }
 
 .postContent {
@@ -451,6 +466,7 @@ footer {
   flex-direction: column;
   padding: var(--spacing-300);
   padding-top: calc(var(--spacing-100) * 8);
+  margin-top: calc(var(--spacing-100) * 8);
   background-color: var(--primary_medium);
   text-decoration: none;
   gap: var(--spacing-200);
@@ -510,6 +526,9 @@ a.lightbox-image {
   }
 }
 @media (max-width: 550px) {
+  footer {
+    padding: var(--spacing-200);
+  }
   .footer-columns {
     grid-template-columns: repeat(1, 1fr);
     gap: var(--spacing-300);
@@ -517,21 +536,50 @@ a.lightbox-image {
 }
 
 @media (max-width: 846px) {
+
+  h1 {
+    font-size: var(--size-300);
+  }
+  h2 {
+    font-size: var(--size-200);
+  }
+  h3 {
+    font-size: var(--size-200);
+  }
   .menu {
     display: none;
   }
+
+  nav {
+    padding: 0 var(--spacing-100);
+  }
+
+  main {
+    padding: 0 var(--spacing-100);
+  }
+
+  section{
+    padding: var(--spacing-100) 0;
+  }
   .postWrapper {
+    gap: var(--spacing-200);
     flex-direction: column;
   }
+  
   .postContent {
     width: 100%;
   }
+
   .block.post {
+    aspect-ratio: 1/1;
     flex-basis: 100%;
     width: 100%;
   }
+  .block.standalone {
+   aspect-ratio: 2/3;
+  }
   .block.standalone.small {
     max-width: 100%;
-    aspect-ratio: 4/3;
+    aspect-ratio: 1/1;
   }
 }

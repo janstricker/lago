@@ -1,5 +1,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#e5e5e4" />
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#373728" />
 <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
 {{ partialCached "head/css.html" . }}
 {{ partialCached "head/js.html" . }}
