@@ -4,7 +4,7 @@
   <section id="vorstand">
     {{ $vorstand := .Site.GetPage "section" "verein/vorstand" }}
     {{ if $vorstand }}
-      <h2 class="sectionTitle">Vorstand</h2>
+      <h3 class="sectionTitle">Vorstand</h3>
       <div class="members">
         {{ range $vorstand.Pages }}
           {{ if eq .Kind "page" }}

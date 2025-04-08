@@ -24,7 +24,9 @@ html {
   --size-90: 0.806rem;
   --size-100: 1rem;
   --size-200: 1.611rem;
+  --size-250: 2.111rem;
   --size-300: 2.611rem;
+  --size-325: 3.0135rem;
   --size-350: 3.416rem;
   --size-400: 4.222rem;
   --size-500: 6.833rem;
@@ -74,8 +76,8 @@ h1.home {
   font-size: var(--size-100);
   letter-spacing: 0px;
 }
-h2{
-  font-size: var(--size-300);
+h2 {
+  font-size: var(--size-325);
   font-weight: 700;
   line-height: 110%;
   margin-block: 0;
@@ -86,7 +88,7 @@ h3 {
   margin-block: 0;
 }
 h4 {
-  font-size: var(--size-100);
+  font-size: var(--size-250);
   font-weight: 700;
   margin-block: 0;
 }
@@ -94,7 +96,7 @@ h5 {
   margin-bottom: var(--spacing-90);
   font-size: var(--size-90);
   font-weight: 900;
-  letter-spacing: calc(var(--size-100) * 0.05);
+  letter-spacing: calc(var(--size-100) * 0.1);
   text-transform: uppercase;
   opacity: 0.75;
   margin-block: 0;
@@ -196,6 +198,7 @@ nav {
 }
 .menu {
   display: flex;
+  align-items: center;
   flex-direction: row;
   font-size: var(--size-100);
   font-weight: 900;
@@ -538,12 +541,15 @@ a.lightbox-image {
 @media (max-width: 846px) {
 
   h1 {
-    font-size: var(--size-300);
+    font-size: var(--size-325);
   }
   h2 {
-    font-size: var(--size-200);
+    font-size: var(--size-300);
   }
   h3 {
+    font-size: var(--size-200);
+  }
+  h4 {
     font-size: var(--size-200);
   }
   .menu {

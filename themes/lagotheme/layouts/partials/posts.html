@@ -1,6 +1,6 @@
 <section class="posts" id="{{ .id }}">
   {{ $posts := .context.Site.GetPage "section" .section }}
-  <h2>{{ $posts.Title }}</h2>
+  <h3>{{ $posts.Title }}</h3>
   {{ $pages := slice }} <!-- Initialisierung der Variable -->
   {{ $limit := .postLimit }}
   {{ if $limit }}
@@ -36,11 +36,11 @@
         {{ end }}
       </div>
       <div class="postContent">
-        <h3>
+        <h4>
           {{ if .Params.linkEnabled }} <a href="{{ .Permalink }}">{{ .Title }}</a>
           {{ else }} {{ .Title }}
           {{ end }}
-        </h3>
+        </h4>
         <summary class="serif">{{ .Summary }}</summary>
       </div>
     </div>
