@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <nav>
-    <a class="logo" href="/">{{site.Title}}</a>
-    <ul class="menu">
-        {{ range site.Menus.main }}
-          <li>
-            <a href="{{ .URL }}" class="menuItem {{ if eq .URL $.RelPermalink }}active{{ end }}">{{ .Name }}</a>
-          </li>
-        {{ end }}
-        <li>
-          <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
-        </li>
-    </ul>
+  <a class="logo" href="/">{{site.Title}}</a>
+    <label for="nav-check" class="hamburger">
+      <input type="checkbox" id="nav-check"/> 
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-container">
+        <ul class="menu">
+            {{ range site.Menus.main }}
+              <li>
+                <a href="{{ .URL }}" class="menuItem {{ if eq .URL $.RelPermalink }}active{{ end }}">{{ .Name }}</a>
+              </li>
+            {{ end }}
+            <li>
+              <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
+            </li>
+        </ul>
+    </div>
 </nav>

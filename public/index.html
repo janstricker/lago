@@ -11,38 +11,48 @@
     <link rel="stylesheet" href="/css/_normalize.css">
     <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navigation.css">
 
       <script src="/js/lightbox.js"></script>
       <script src="/js/main.js"></script>
+      <script src="/js/navigation.js"></script>
 
 </head>
 <body>
   <header>
     <!DOCTYPE html>
 <nav>
-    <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
-    <ul class="menu">
-        
-          <li>
-            <a href="/" class="menuItem active">Start</a>
-          </li>
-        
-          <li>
-            <a href="/aktuelles/" class="menuItem ">Aktuelles</a>
-          </li>
-        
-          <li>
-            <a href="/verein/" class="menuItem ">Verein</a>
-          </li>
-        
-          <li>
-            <a href="/der-lago/" class="menuItem ">Unser &#34;Lago&#34;</a>
-          </li>
-        
-        <li>
-          <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
-        </li>
-    </ul>
+  <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
+    <label for="nav-check" class="hamburger">
+      <input type="checkbox" id="nav-check"/> 
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-container">
+        <ul class="menu">
+            
+              <li>
+                <a href="/" class="menuItem active">Start</a>
+              </li>
+            
+              <li>
+                <a href="/aktuelles/" class="menuItem ">Aktuelles</a>
+              </li>
+            
+              <li>
+                <a href="/verein/" class="menuItem ">Verein</a>
+              </li>
+            
+              <li>
+                <a href="/der-lago/" class="menuItem ">Unser &#34;Lago&#34;</a>
+              </li>
+            
+            <li>
+              <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
+            </li>
+        </ul>
+    </div>
 </nav>
   </header>
   <main>

@@ -225,16 +225,7 @@ nav {
   padding: 0 var(--spacing-200);
   background-color: var(--primary_weakest);
 }
-.menu {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  font-size: var(--size-100);
-  font-weight: 900;
-  text-decoration: none;
-  gap: var(--spacing-100);
-  list-style: none;
-}
+
 .logo {
   max-width: calc(var(--size-100) * 8);
 }
@@ -599,9 +590,6 @@ a.lightbox-image {
   }
   h4 {
     font-size: var(--size-200);
-  }
-  .menu {
-    display: none;
   }
 
   nav {
