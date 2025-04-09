@@ -46,7 +46,7 @@ html {
   --radius-400: 1.164rem;
 
   /* Var Color */
-  --secondary_strong:#e1313c;
+  --secondary_strong:#CB202B;
   --primary_strongest:#373728;
   --primary_medium:#bdc1bb;
   --primary_medium_o:#8c8b8a66;
@@ -111,6 +111,15 @@ h6 {
 }
 p {
   margin-block: 0;
+}
+
+p.footer {
+  margin-bottom: var(--spacing-90);
+  font-size: var(--size-90);
+  font-weight: 900;
+  letter-spacing: calc(var(--size-100) * 0.1);
+  text-transform: uppercase;
+  opacity: 0.825;
 }
 
 .caption {
@@ -338,7 +347,7 @@ figure {
 
 .open {
   background-color: hsla(73, 47%, 37%, 0.135);
-  color: #5B6E16;
+  color: #52650C;
 }
 
 .closed {
