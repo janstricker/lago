@@ -46,7 +46,7 @@ html {
   --radius-400: 1.164rem;
 
   /* Var Color */
-  --secondary_strong:#e1313c;
+  --secondary_strong:#CB202B;
   --primary_strongest:#373728;
   --primary_medium:#bdc1bb;
   --primary_medium_o:#8c8b8a66;
@@ -111,6 +111,15 @@ h6 {
 }
 p {
   margin-block: 0;
+}
+
+p.footer {
+  margin-bottom: var(--spacing-90);
+  font-size: var(--size-90);
+  font-weight: 900;
+  letter-spacing: calc(var(--size-100) * 0.1);
+  text-transform: uppercase;
+  opacity: 0.825;
 }
 
 .caption {
@@ -216,16 +225,7 @@ nav {
   padding: 0 var(--spacing-200);
   background-color: var(--primary_weakest);
 }
-.menu {
-  display: flex;
-  align-items: center;
-  flex-direction: row;
-  font-size: var(--size-100);
-  font-weight: 900;
-  text-decoration: none;
-  gap: var(--spacing-100);
-  list-style: none;
-}
+
 .logo {
   max-width: calc(var(--size-100) * 8);
 }
@@ -233,9 +233,13 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-400);
   padding: 0 var(--spacing-200);
   margin: auto;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
 }
 
 .gap-0 {
@@ -306,6 +310,10 @@ figure {
   flex-basis: calc(50% - var(--spacing-100));
   aspect-ratio: 4/3;
 }
+.block.post.detail {
+  flex-basis: 100%;
+  aspect-ratio: 16/9;
+}
 
 .block.standalone {
   flex-basis: 100%;
@@ -338,7 +346,7 @@ figure {
 
 .open {
   background-color: hsla(73, 47%, 37%, 0.135);
-  color: #5B6E16;
+  color: #52650C;
 }
 
 .closed {
@@ -380,6 +388,14 @@ figure {
   gap: var(--spacing-200);
 }
 
+.postsHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-200);
+}
+
 .postWrapper {
   display: flex;
   flex-direction: row;
@@ -396,7 +412,6 @@ figure {
 
 .postContent {
   width: 50%;
-  margin-top: calc(var(--spacing-100) * -1);
 }
 
 .postMeta{
@@ -441,6 +456,10 @@ figure {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-300);
+}
+
+ul.faq {
+  padding-inline-start: var(--spacing-100);
 }
 .faqItem {
   gap: var(--spacing-80);
@@ -571,9 +590,6 @@ a.lightbox-image {
   }
   h4 {
     font-size: var(--size-200);
-  }
-  .menu {
-    display: none;
   }
 
   nav {

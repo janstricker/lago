@@ -1,8 +1,9 @@
 +++
-title = 'Post 1'
+title = 'Post 1 mit Detailseite'
 publishDate = 2024-09-19
+credit = 'Fotograf (optional)'
 linkEnabled = 'true'
-summary = 'Labore et dolore magna.'
+summary = 'Kurzzusammenfassung anstatt Darstellung des Contents. Labore et dolore magna.'
 tags = 'Veranstaltung'
 +++
 

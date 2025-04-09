@@ -1,6 +1,13 @@
 <section class="posts" id="{{ .id }}">
   {{ $posts := .context.Site.GetPage "section" .section }}
-  <h3>{{ $posts.Title }}</h3>
+  <div class = "postsHeader">
+    <h3>{{ $posts.Title }}</h3>
+    {{ if eq .context.Kind "home" }}
+    <div class="more-posts">
+      <a href="/aktuelles#aktuelles">Mehr ansehen</a>
+    </div>
+  {{ end }}
+  </div>
   {{ $pages := slice }} <!-- Initialisierung der Variable -->
   {{ $limit := .postLimit }}
   {{ if $limit }}
@@ -32,7 +39,9 @@
         {{ $image := .Resources.ByType "image" }}
         {{ with (index $image 0) }}
         {{ $resized := .Fit "800x800 webp q75" }}
-          <img class="blockImage" src="{{ $resized.RelPermalink }}" alt="{{ $posts.Title }}" />
+          <a href="{{ (.Fit "1600x1600 q90").RelPermalink }}" class="lightbox-image">
+            <img class="blockImage" src="{{ $resized.RelPermalink }}" alt="{{ $posts.Title }}" />
+          </a>
           {{ else }}
           <div class="noImage">Kein Bild verfügbar</div>
         {{ end }}
@@ -45,6 +54,11 @@
         </h4>
         <summary class="serif">{{ .Summary }}</summary>
       </div>
+    </div>
+  {{ end }}
+  {{ if .isHome }}
+    <div class="more-posts">
+      <a href="/aktuelles" class="">Alle Beiträge ansehen</a>
     </div>
   {{ end }}
 </section>

@@ -11,80 +11,97 @@
     <link rel="stylesheet" href="/css/_normalize.css">
     <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navigation.css">
 
       <script src="/js/lightbox.js"></script>
       <script src="/js/main.js"></script>
+      <script src="/js/navigation.js"></script>
 
 </head>
 <body>
   <header>
     <!DOCTYPE html>
 <nav>
-    <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
-    <ul class="menu">
-        
-          <li>
-            <a href="/" class="menuItem active">Start</a>
-          </li>
-        
-          <li>
-            <a href="/aktuelles/" class="menuItem ">Aktuelles</a>
-          </li>
-        
-          <li>
-            <a href="/verein/" class="menuItem ">Verein</a>
-          </li>
-        
-          <li>
-            <a href="/der-lago/" class="menuItem ">Unser &#34;Lago&#34;</a>
-          </li>
-        
-        <li>
-          <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
-        </li>
-    </ul>
+  <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
+    <label for="nav-check" class="hamburger">
+      <input type="checkbox" id="nav-check"/> 
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-container">
+        <ul class="menu">
+            
+              <li>
+                <a href="/" class="menuItem active">Start</a>
+              </li>
+            
+              <li>
+                <a href="/aktuelles/" class="menuItem ">Aktuelles</a>
+              </li>
+            
+              <li>
+                <a href="/verein/" class="menuItem ">Verein</a>
+              </li>
+            
+              <li>
+                <a href="/der-lago/" class="menuItem ">Unser &#34;Lago&#34;</a>
+              </li>
+            
+            <li>
+              <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
+            </li>
+        </ul>
+    </div>
 </nav>
   </header>
   <main>
     
 
 
-<section id="stage">
-  <div class="block stage">
-    <div class="blockContent stage">
-        <h1 class="home">Freibad Langer Teich in Selb</h1>
-        <h2 class="serif">Waldbaden auf Selberisch</h2>
-        <div class="openingInfo">
+<div class="home">
+  <section id="stage">
+    <div class="block stage">
+      <div class="blockContent stage">
+          <h1 class="home">Freibad Langer Teich in Selb</h1>
+          <h2 class="serif">Waldbaden auf Selberisch</h2>
+          <div class="openingInfo">
+            
+            <p class ="indicator open">Geöffnet</p> <p>Täglich 9:00 - 20:00 Uhr</p>
+            
+          </div>
+      </div>
+        
+        
           
-          <p class ="indicator open">Geöffnet</p> <p>Täglich 9:00 - 20:00 Uhr</p>
           
-        </div>
-    </div>
-      
-      
+          
+          
+          <img class="blockImage" 
+            srcset="/homepage/open_hu_f39a0b7ecb2f3f1a.webp 320w,
+                    /homepage/open_hu_369450281cafa8ab.webp 640w,
+                    /homepage/open_hu_77f68c3c56697968.webp 768w,
+                    /homepage/open_hu_963b93e0c4bc6f50.webp 1024w"
+            sizes="(max-width: 320px) 320px,
+                   (max-width: 640px) 640px,
+                   (max-width: 768px) 768px,
+                   1024px"
+            src="/homepage/open_hu_963b93e0c4bc6f50.webp"
+            loading="eager"
+            alt="Waldbad Langer Teich in Selb in der Sommersaison" />
         
-        
-        
-        
-        <img class="blockImage" 
-          srcset="/homepage/open_hu_f39a0b7ecb2f3f1a.webp 320w,
-                  /homepage/open_hu_369450281cafa8ab.webp 640w,
-                  /homepage/open_hu_77f68c3c56697968.webp 768w,
-                  /homepage/open_hu_963b93e0c4bc6f50.webp 1024w"
-          sizes="(max-width: 320px) 320px,
-                 (max-width: 640px) 640px,
-                 (max-width: 768px) 768px,
-                 1024px"
-          src="/homepage/open_hu_963b93e0c4bc6f50.webp"
-          loading="eager"
-          alt="Waldbad Langer Teich in Selb in der Sommersaison" />
-      
-    </div>
-</section>
-
+      </div>
+  </section>
   <section class="posts" id="aktuelles">
   
-  <h3>Aktuelles</h3>
+  <div class = "postsHeader">
+    <h3>Aktuelles</h3>
+    
+    <div class="more-posts">
+      <a href="/aktuelles#aktuelles">Mehr ansehen</a>
+    </div>
+  
+  </div>
    
   
   
@@ -95,6 +112,8 @@
       <div class="block post">
         <div class="blockContent post">
           <p>19.09.2024</p>
+          
+          <p>Fotograf (optional)</p>
           
           <div class="postMeta">
             
@@ -112,15 +131,17 @@
         
         
         
-          <img class="blockImage" src="/aktuelles/posts/20240919-post1/post1_hu_c04dc2b194b89d80.webp" alt="Aktuelles" />
+          <a href="/aktuelles/posts/20240919-post1/images/yoji-yoneyama-GycM8kcHzYQ-unsplash_hu_15c49cb1de023a46.jpg" class="lightbox-image">
+            <img class="blockImage" src="/aktuelles/posts/20240919-post1/images/yoji-yoneyama-GycM8kcHzYQ-unsplash_hu_669e24839e57c4ce.webp" alt="Aktuelles" />
+          </a>
           
       </div>
       <div class="postContent">
         <h4>
-           <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/">Post 1</a>
+           <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/aktuelles/posts/20240919-post1/">Post 1 mit Detailseite</a>
           
         </h4>
-        <summary class="serif">Labore et dolore magna.</summary>
+        <summary class="serif">Kurzzusammenfassung anstatt Darstellung des Contents. Labore et dolore magna.</summary>
       </div>
     </div>
   
@@ -129,7 +150,7 @@
         <div class="blockContent post">
           <p>02.06.2024</p>
           
-          <p>Photographer</p>
+          <p>Fotograf (optional)</p>
           
           <div class="postMeta">
             
@@ -147,20 +168,22 @@
         
         
         
-          <img class="blockImage" src="/aktuelles/posts/20240602-post2/post2_hu_650092b32c76b109.webp" alt="Aktuelles" />
+          <a href="/aktuelles/posts/20240602-post2/images/tommaso-fornoni-XrzLWellnd0-unsplash_hu_abd81577a5f520ae.jpg" class="lightbox-image">
+            <img class="blockImage" src="/aktuelles/posts/20240602-post2/images/tommaso-fornoni-XrzLWellnd0-unsplash_hu_5644c9729120b070.webp" alt="Aktuelles" />
+          </a>
           
       </div>
       <div class="postContent">
         <h4>
-           Lorem Ipsum Dolor
+           Post 2 ohne Detailseite
           
         </h4>
-        <summary class="serif"><p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p></summary>
+        <summary class="serif"><p>Gesamter Content ohne Kurzzusammenfassung lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p></summary>
       </div>
     </div>
   
+  
 </section>
-
   <section id="faq">
     <h3>Häufige Fragen – FAQ</h3>
     <ul class="faq">
@@ -186,6 +209,7 @@
       
     </ul>
   </section>
+</div>
   
 
   </main>
@@ -193,7 +217,7 @@
       <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
   <div class="footer-columns">
     <div class="footer-column">
-      <h5>Inhalt</h5>
+      <p class="footer">Inhalt</p>
       <ul>
         
         <li><a href="/" class=" menuItem active">Start</a></li>
@@ -209,7 +233,7 @@
       </ul>
     </div>
     <div class="footer-column">
-      <h5>Hilfe & Kontakt</h5>
+      <p class="footer">Hilfe & Kontakt</p>
       <ul>
         <li><a href="/#faq">Häufige Fragen – FAQ</a></li>
         <li><a href="/verein/#kontakt">Kontakt</a></li>
@@ -218,7 +242,7 @@
       </ul>
     </div>
     <div class="footer-column">
-      <h5>Soziale Medien</h5>
+      <p class="footer">Soziale Medien</p>
       <ul>
         <li><a href="https://www.facebook.com/FoerdervereinLangerTeichEV" target="_blank">Facebook</a></li>
         <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
@@ -232,7 +256,7 @@
       </ul>
     </div>
   </div>
-<h5>&copy; 2025 Förderverein Langer Teich e.V.</h5>
+<p class="footer">&copy; 2025 Förderverein Langer Teich e.V.</p>
 
   </footer>
 </body>

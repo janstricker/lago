@@ -1,69 +1,70 @@
 {{ define "main" }}
 
 
-<section id="stage">
-  <div class="block stage">
-    <div class="blockContent stage">
-        <h1 class="home">{{ .Params.smallTitle }}</h1>
-        <h2 class="serif">{{ .Params.largeTitle }}</h2>
-        <div class="openingInfo">
-          {{ if .Params.isOpen }}
-          <p class ="indicator open">{{.Params.openCallout}}</p> <p>{{.Params.openText}}</p>
-          {{ else }}
-          <p class ="indicator closed">{{.Params.closedCallout}}</p>
-          {{ if .Params.openingDate }}
-          {{ $now := now.UTC | time.Format "2006-01-02" | time }}
-          {{ $openingDate := time .Params.openingDate | time }}
-          {{ $daysUntil := div ($openingDate.Sub $now).Hours 24 | int }}
-          <p>Noch <strong>{{ $daysUntil }}</strong> Tage bis zur Eröffnung am {{ .Params.openingDate | time.Format ":date_medium" }}</p>
-          {{else}}
-          {{.Params.closedText}} 
-          </p>
-          {{ end }}
-          {{ end }}
-        </div>
-    </div>
-      {{ if .Params.isOpen }}
-      {{ $image := .Resources.GetMatch "homepage/open.*" }}
-        {{ $img320 := $image.Fill "320x224 webp q75" }}
-        {{ $img640 := $image.Fill "640x448 webp q75" }}
-        {{ $img768 := $image.Fill "768x538 webp q75" }}
-        {{ $img1024 := $image.Fill "1024x720 webp q75" }}
-        <img class="blockImage" 
-          srcset="{{ $img320.RelPermalink }} 320w,
-                  {{ $img640.RelPermalink }} 640w,
-                  {{ $img768.RelPermalink }} 768w,
-                  {{ $img1024.RelPermalink }} 1024w"
-          sizes="(max-width: 320px) 320px,
-                 (max-width: 640px) 640px,
-                 (max-width: 768px) 768px,
-                 1024px"
-          src="{{ $img1024.RelPermalink }}"
-          loading="eager"
-          alt="Waldbad Langer Teich in Selb in der Sommersaison" />
-      {{ else }}
-      {{ $image := .Resources.GetMatch "homepage/closed.*" }}
-        {{ $img320 := $image.Fill "320x224 webp q75" }}
-        {{ $img640 := $image.Fill "640x448 webp q75" }}
-        {{ $img768 := $image.Fill "768x538 webp q75" }}
-        {{ $img1024 := $image.Fill "1024x720 webp q75" }}
-        <img class="blockImage" 
-          srcset="{{ $img320.RelPermalink }} 320w,
-                  {{ $img640.RelPermalink }} 640w,
-                  {{ $img768.RelPermalink }} 768w,
-                  {{ $img1024.RelPermalink }} 1024w"
-          sizes="(max-width: 320px) 320px,
-                 (max-width: 640px) 640px,
-                 (max-width: 768px) 768px,
-                 1024px"
-          src="{{ $img1024.RelPermalink }}"
-          loading="eager"
-          alt="Waldbad Langer Teich in Selb außerhalb der Saison" />
-      {{ end }}
-    </div>
-</section>
-
+<div class="home">
+  <section id="stage">
+    <div class="block stage">
+      <div class="blockContent stage">
+          <h1 class="home">{{ .Params.smallTitle }}</h1>
+          <h2 class="serif">{{ .Params.largeTitle }}</h2>
+          <div class="openingInfo">
+            {{ if .Params.isOpen }}
+            <p class ="indicator open">{{.Params.openCallout}}</p> <p>{{.Params.openText}}</p>
+            {{ else }}
+            <p class ="indicator closed">{{.Params.closedCallout}}</p>
+            {{ if .Params.openingDate }}
+            {{ $now := now.UTC | time.Format "2006-01-02" | time }}
+            {{ $openingDate := time .Params.openingDate | time }}
+            {{ $daysUntil := div ($openingDate.Sub $now).Hours 24 | int }}
+            <p>Noch <strong>{{ $daysUntil }}</strong> Tage bis zur Eröffnung am {{ .Params.openingDate | time.Format ":date_medium" }}</p>
+            {{else}}
+            {{.Params.closedText}} 
+            </p>
+            {{ end }}
+            {{ end }}
+          </div>
+      </div>
+        {{ if .Params.isOpen }}
+        {{ $image := .Resources.GetMatch "homepage/open.*" }}
+          {{ $img320 := $image.Fill "320x224 webp q75" }}
+          {{ $img640 := $image.Fill "640x448 webp q75" }}
+          {{ $img768 := $image.Fill "768x538 webp q75" }}
+          {{ $img1024 := $image.Fill "1024x720 webp q75" }}
+          <img class="blockImage" 
+            srcset="{{ $img320.RelPermalink }} 320w,
+                    {{ $img640.RelPermalink }} 640w,
+                    {{ $img768.RelPermalink }} 768w,
+                    {{ $img1024.RelPermalink }} 1024w"
+            sizes="(max-width: 320px) 320px,
+                   (max-width: 640px) 640px,
+                   (max-width: 768px) 768px,
+                   1024px"
+            src="{{ $img1024.RelPermalink }}"
+            loading="eager"
+            alt="Waldbad Langer Teich in Selb in der Sommersaison" />
+        {{ else }}
+        {{ $image := .Resources.GetMatch "homepage/closed.*" }}
+          {{ $img320 := $image.Fill "320x224 webp q75" }}
+          {{ $img640 := $image.Fill "640x448 webp q75" }}
+          {{ $img768 := $image.Fill "768x538 webp q75" }}
+          {{ $img1024 := $image.Fill "1024x720 webp q75" }}
+          <img class="blockImage" 
+            srcset="{{ $img320.RelPermalink }} 320w,
+                    {{ $img640.RelPermalink }} 640w,
+                    {{ $img768.RelPermalink }} 768w,
+                    {{ $img1024.RelPermalink }} 1024w"
+            sizes="(max-width: 320px) 320px,
+                   (max-width: 640px) 640px,
+                   (max-width: 768px) 768px,
+                   1024px"
+            src="{{ $img1024.RelPermalink }}"
+            loading="eager"
+            alt="Waldbad Langer Teich in Selb außerhalb der Saison" />
+        {{ end }}
+      </div>
+  </section>
   {{ partial "posts.html" (dict "id" "aktuelles" "section" "aktuelles/posts" "context" . "postLimit" 2) }}
   {{ partial "faq.html" . }}
+</div>
   
 {{ end }}

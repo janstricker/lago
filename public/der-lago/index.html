@@ -10,38 +10,48 @@
     <link rel="stylesheet" href="/css/_normalize.css">
     <link rel="stylesheet" href="/css/lightbox.css">
     <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navigation.css">
 
       <script src="/js/lightbox.js"></script>
       <script src="/js/main.js"></script>
+      <script src="/js/navigation.js"></script>
 
 </head>
 <body>
   <header>
     <!DOCTYPE html>
 <nav>
-    <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
-    <ul class="menu">
-        
-          <li>
-            <a href="/" class="menuItem ">Start</a>
-          </li>
-        
-          <li>
-            <a href="/aktuelles/" class="menuItem ">Aktuelles</a>
-          </li>
-        
-          <li>
-            <a href="/verein/" class="menuItem ">Verein</a>
-          </li>
-        
-          <li>
-            <a href="/der-lago/" class="menuItem active">Unser &#34;Lago&#34;</a>
-          </li>
-        
-        <li>
-          <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
-        </li>
-    </ul>
+  <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
+    <label for="nav-check" class="hamburger">
+      <input type="checkbox" id="nav-check"/> 
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <div class="nav-container">
+        <ul class="menu">
+            
+              <li>
+                <a href="/" class="menuItem ">Start</a>
+              </li>
+            
+              <li>
+                <a href="/aktuelles/" class="menuItem ">Aktuelles</a>
+              </li>
+            
+              <li>
+                <a href="/verein/" class="menuItem ">Verein</a>
+              </li>
+            
+              <li>
+                <a href="/der-lago/" class="menuItem active">Unser &#34;Lago&#34;</a>
+              </li>
+            
+            <li>
+              <a class="btn primary" href="/verein/#mitglied-werden">Mitglied werden</a>
+            </li>
+        </ul>
+    </div>
 </nav>
   </header>
   <main>
@@ -49,13 +59,13 @@
 <section class="contentHeader">
     <h1 class="sans">Der &#34;Lago&#34; – Über das Waldbad Langer Teich</h1>
     
-        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+        <p class="serif">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
     
 </section>
 
 <section class = "content">
-    <p><figure class="block standalone "><img class="blockImage" src="/der-lago/images/volleyball_hu_44321fa33aa1a75.webp"
-    alt="Volleyballturnier"><figcaption class="blockContent"><p class="credit">
+    <p><figure class="block standalone "><a href="/der-lago/images/volleyball_hu_66541485944d9d60.jpg" class="lightbox-image"><img class="blockImage" src="/der-lago/images/volleyball_hu_44321fa33aa1a75.webp"
+    alt="Volleyballturnier"></a><figcaption class="blockContent"><p class="credit">
           <a href="https://www.fotograf.de/">Fotograf</a>
       </p>
       <p class="caption">Volleyballturnier am Langer</p>
@@ -64,14 +74,14 @@
 </figure>
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
 Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
-<figure class="block standalone small"><img class="blockImage" src="/der-lago/images/boot_hu_c20703c958d95c6a.webp"
-    alt="Platsche"><figcaption class="blockContent">
+<figure class="block standalone small"><a href="/der-lago/images/boot_hu_200b076cc3003ff2.jpg" class="lightbox-image"><img class="blockImage" src="/der-lago/images/boot_hu_c20703c958d95c6a.webp"
+    alt="Platsche"></a><figcaption class="blockContent">
       <p class="caption">Boot</p>
 
     </figcaption>
 </figure>
-<figure class="block standalone small"><img class="blockImage" src="/der-lago/images/wasser_hu_eb2c145eca5775c2.webp"
-    alt="Sprungbrett"><figcaption class="blockContent">
+<figure class="block standalone small"><a href="/der-lago/images/wasser_hu_5104bbd212d897e7.jpg" class="lightbox-image"><img class="blockImage" src="/der-lago/images/wasser_hu_eb2c145eca5775c2.webp"
+    alt="Sprungbrett"></a><figcaption class="blockContent">
       <p class="caption">Schön nei hupfen</p>
 
     </figcaption>
@@ -86,18 +96,33 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
     
     <ul class="galleryImages">
     <li>
-          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/image%20copy%202_hu_9e70ee7d29742f7.png" title="image copy 2" class="lightbox-image">
-            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/image%20copy%202_hu_bc7125ba424f0262.png" alt="image copy 2" title="image copy 2">
+          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/casey-joyce-xCpVhGxpi3U-unsplash_hu_eff41c2677c26170.jpg" title="casey-joyce-xCpVhGxpi3U-unsplash" class="lightbox-image">
+            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/casey-joyce-xCpVhGxpi3U-unsplash_hu_5ec2e23f48a9b721.jpg" alt="casey-joyce-xCpVhGxpi3U-unsplash" title="casey-joyce-xCpVhGxpi3U-unsplash">
           </a>
         </li>
     <li>
-          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/image%20copy_hu_476dba0058963860.png" title="image copy" class="lightbox-image">
-            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/image%20copy_hu_5f1d2ad01b8676d5.png" alt="image copy" title="image copy">
+          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/cassiano-k-wehr-aZoGEfl5MQU-unsplash_hu_bf4a0e7eacc84b69.jpg" title="cassiano-k-wehr-aZoGEfl5MQU-unsplash" class="lightbox-image">
+            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/cassiano-k-wehr-aZoGEfl5MQU-unsplash_hu_7e0f8d60bd98e3f.jpg" alt="cassiano-k-wehr-aZoGEfl5MQU-unsplash" title="cassiano-k-wehr-aZoGEfl5MQU-unsplash">
           </a>
         </li>
     <li>
-          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/image_hu_aa4560b26859a921.png" title="image" class="lightbox-image">
-            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/image_hu_fb4031c41f55c1b9.png" alt="image" title="image">
+          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/jeff-ma--9Rz4fI_rGQ-unsplash_hu_6231fc7c420bdaa7.jpg" title="jeff-ma--9Rz4fI_rGQ-unsplash" class="lightbox-image">
+            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/jeff-ma--9Rz4fI_rGQ-unsplash_hu_62e3e47a750ce9f2.jpg" alt="jeff-ma--9Rz4fI_rGQ-unsplash" title="jeff-ma--9Rz4fI_rGQ-unsplash">
+          </a>
+        </li>
+    <li>
+          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/mary-she-uyztMPteLYQ-unsplash_hu_afa5f0baaaf7020c.jpg" title="mary-she-uyztMPteLYQ-unsplash" class="lightbox-image">
+            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/mary-she-uyztMPteLYQ-unsplash_hu_ee9594296dbf14fe.jpg" alt="mary-she-uyztMPteLYQ-unsplash" title="mary-she-uyztMPteLYQ-unsplash">
+          </a>
+        </li>
+    <li>
+          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/max-omen-oCDbg-dbE-A-unsplash_hu_705579a7d86ed1cc.jpg" title="max-omen-oCDbg-dbE-A-unsplash" class="lightbox-image">
+            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/max-omen-oCDbg-dbE-A-unsplash_hu_be3e1ee07389bc78.jpg" alt="max-omen-oCDbg-dbE-A-unsplash" title="max-omen-oCDbg-dbE-A-unsplash">
+          </a>
+        </li>
+    <li>
+          <a href="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/rvbina-ADVfcygzH9Q-unsplash_hu_af67313890804db8.jpg" title="rvbina-ADVfcygzH9Q-unsplash" class="lightbox-image">
+            <img src="https://humble-space-chainsaw-75xpwxj65q9fxppq-1313.app.github.dev/der-lago/album/rvbina-ADVfcygzH9Q-unsplash_hu_44f0a87151163d00.jpg" alt="rvbina-ADVfcygzH9Q-unsplash" title="rvbina-ADVfcygzH9Q-unsplash">
           </a>
         </li>
     
@@ -110,7 +135,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       <a class="logo" href="/">Förderverein Langer Teich e.V.</a>
   <div class="footer-columns">
     <div class="footer-column">
-      <h5>Inhalt</h5>
+      <p class="footer">Inhalt</p>
       <ul>
         
         <li><a href="/" class=" menuItem ">Start</a></li>
@@ -126,7 +151,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       </ul>
     </div>
     <div class="footer-column">
-      <h5>Hilfe & Kontakt</h5>
+      <p class="footer">Hilfe & Kontakt</p>
       <ul>
         <li><a href="/#faq">Häufige Fragen – FAQ</a></li>
         <li><a href="/verein/#kontakt">Kontakt</a></li>
@@ -135,7 +160,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       </ul>
     </div>
     <div class="footer-column">
-      <h5>Soziale Medien</h5>
+      <p class="footer">Soziale Medien</p>
       <ul>
         <li><a href="https://www.facebook.com/FoerdervereinLangerTeichEV" target="_blank">Facebook</a></li>
         <li><a href="https://instagram.com" target="_blank">Instagram</a></li>
@@ -149,7 +174,7 @@ Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
       </ul>
     </div>
   </div>
-<h5>&copy; 2025 Förderverein Langer Teich e.V.</h5>
+<p class="footer">&copy; 2025 Förderverein Langer Teich e.V.</p>
 
   </footer>
 </body>
