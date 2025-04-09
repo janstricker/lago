@@ -1,6 +1,13 @@
 <figure class="block standalone {{ with .Get "class" }}{{ . }}{{ end }}">
   {{- if .Get "link" -}}
     <a href="{{ .Get "link" }}"{{ with .Get "target" }} target="{{ . }}"{{ end }}{{ with .Get "rel" }} rel="{{ . }}"{{ end }}>
+  {{- else -}}
+    {{- $u := urls.Parse (.Get "src") -}}
+    {{- if not $u.IsAbs -}}
+      {{- with or (.Page.Resources.GetMatch $u.Path) (resources.GetMatch $u.Path) -}}
+        <a href="{{ (.Fit "1600x1600 q90").RelPermalink }}" class="lightbox-image">
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
 
   {{- $u := urls.Parse (.Get "src") -}}
@@ -23,7 +30,14 @@
     {{- with .Get "height" }} height="{{ . }}"{{ end -}}
     {{- with .Get "loading" }} loading="{{ . }}"{{ end -}}
   ><!-- Closing img tag -->
-  {{- if .Get "link" }}</a>{{ end -}}
+  {{- if .Get "link" }}</a>
+  {{- else -}}
+    {{- if not $u.IsAbs -}}
+      {{- with or (.Page.Resources.GetMatch $u.Path) (resources.GetMatch $u.Path) -}}
+        </a>
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
   {{- if or (or (.Get "title") (.Get "caption")) (.Get "credit") -}}
     <figcaption class="blockContent">
       {{- if .Get "credit" }}<p class="credit">
