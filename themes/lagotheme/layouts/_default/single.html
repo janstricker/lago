@@ -1,4 +1,39 @@
 {{ define "main" }}
 {{ partial "contentHeader" . }}
-  {{ .Content }}
+{{ if .Content }}
+<section class="content">
+    <div class="block post detail">
+      <div class="blockContent post detail">
+        <p>{{ .Date | time.Format ":date_medium" }}</p>
+        {{ with .Params.credit }}
+        <p class="credit">{{ . }}</p>
+        {{ end }}
+        <div class="postMeta">
+          {{ with .Params.tags }}
+            {{ $tags := . }}
+            {{ if not (reflect.IsSlice $tags) }}
+              {{ $tags = slice $tags }}
+            {{ end }}
+              {{ range $index, $tag := $tags }}
+                <p class="tag">{{ $tag }}</p>
+              {{ end }}
+          {{ end }}
+        </div>
+      </div>
+      {{ $image := .Resources.ByType "image" }}
+      {{ with (index $image 0) }}
+      {{ $resized := .Fit "800x800 webp q75" }}
+        <a href="{{ (.Fit "1600x1600 q90").RelPermalink }}" class="lightbox-image">
+          <img class="blockImage" src="{{ $resized.RelPermalink }}" alt="{{ .Title }}" />
+        </a>
+        {{ else }}
+        <div class="noImage">Kein Bild verfügbar</div>
+      {{ end }}
+    </div>
+    {{ .Content }}
+</section>
+{{ end }}
+{{ if .Resources.GetMatch "album/*" }}
+    {{ partial "image-gallery" (dict "context" . "gallery_dir" "/album") }}
+{{ end }}
 {{ end }}

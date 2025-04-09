@@ -242,9 +242,13 @@ nav {
 main {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-400);
   padding: 0 var(--spacing-200);
   margin: auto;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-300);
 }
 
 .gap-0 {
@@ -314,6 +318,10 @@ figure {
 .block.post {
   flex-basis: calc(50% - var(--spacing-100));
   aspect-ratio: 4/3;
+}
+.block.post.detail {
+  flex-basis: 100%;
+  aspect-ratio: 16/9;
 }
 
 .block.standalone {
@@ -389,6 +397,14 @@ figure {
   gap: var(--spacing-200);
 }
 
+.postsHeader {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--spacing-200);
+}
+
 .postWrapper {
   display: flex;
   flex-direction: row;
@@ -405,7 +421,6 @@ figure {
 
 .postContent {
   width: 50%;
-  margin-top: calc(var(--spacing-100) * -1);
 }
 
 .postMeta{
@@ -450,6 +465,10 @@ figure {
   display: flex;
   flex-direction: column;
   gap: var(--spacing-300);
+}
+
+ul.faq {
+  padding-inline-start: var(--spacing-100);
 }
 .faqItem {
   gap: var(--spacing-80);

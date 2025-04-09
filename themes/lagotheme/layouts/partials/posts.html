@@ -1,6 +1,13 @@
 <section class="posts" id="{{ .id }}">
   {{ $posts := .context.Site.GetPage "section" .section }}
-  <h3>{{ $posts.Title }}</h3>
+  <div class = "postsHeader">
+    <h3>{{ $posts.Title }}</h3>
+    {{ if eq .context.Kind "home" }}
+    <div class="more-posts">
+      <a href="/aktuelles#aktuelles">Mehr ansehen</a>
+    </div>
+  {{ end }}
+  </div>
   {{ $pages := slice }} <!-- Initialisierung der Variable -->
   {{ $limit := .postLimit }}
   {{ if $limit }}
@@ -47,6 +54,11 @@
         </h4>
         <summary class="serif">{{ .Summary }}</summary>
       </div>
+    </div>
+  {{ end }}
+  {{ if .isHome }}
+    <div class="more-posts">
+      <a href="/aktuelles" class="">Alle Beiträge ansehen</a>
     </div>
   {{ end }}
 </section>
