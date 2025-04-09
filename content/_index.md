@@ -3,7 +3,7 @@ title = 'Startseite'
 smallTitle = 'Freibad Langer Teich in Selb' # = h1
 largeTitle = 'Waldbaden auf Selberisch' # = h2
 [params]
-    isOpen = 'x' # '[Leer]' = Geschlossen, Jeder Wert (z.B. 'x') = Geöffnet
+    isOpen = '' # '[Leer]' = Geschlossen, Jeder Wert (z.B. 'x') = Geöffnet
     openCallout = 'Geöffnet' # Grün hinterlegt
     openText = 'Täglich 9:00 - 20:00 Uhr' 
 
